@@ -1,4 +1,4 @@
-import { Container } from './styled';
+import { ButtonContainer } from './styled';
 
 type ButtonProps = {
 	children: any;
@@ -26,8 +26,9 @@ const Button = ({
 	...props
 }: ButtonProps) => {
 	return (
-		<Container
+		<ButtonContainer
 			{...props}
+			onClick={onClick}
 			styles={{
 				radius,
 				color,
@@ -39,7 +40,7 @@ const Button = ({
 			}}
 		>
 			{children}
-		</Container>
+		</ButtonContainer>
 	);
 };
 

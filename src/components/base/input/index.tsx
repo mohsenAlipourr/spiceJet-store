@@ -1,4 +1,4 @@
-import { Container } from './styled';
+import { InputContainer } from './styled';
 
 type InputProps = {
 	radius?: number;
@@ -32,14 +32,23 @@ const Input = ({
 	...props
 }: InputProps) => {
 	return (
-		<Container
+		<InputContainer
 			{...props}
+			name={name}
+			value={value}
+			onChange={onChange}
+			type={type}
+			required={isRequired}
+			disabled={disabled}
+			pattern={pattern}
+			placeholder={placeholder}
 			styles={{
 				radius,
 				width,
 				height,
 				borderColor,
-			}}></Container>
+			}}
+		/>
 	);
 };
 

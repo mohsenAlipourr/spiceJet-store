@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { HeaderContent, HeaderLogo } from './style';
 
 const Header = () => {
@@ -6,8 +7,8 @@ const Header = () => {
 			<HeaderLogo src='logo.png' alt='' />
 			<div></div>
 			<div>
-				<img src='account.png' alt='' />
-				<img src='cart.png' alt='' />
+				<Image src='account.png' alt='' />
+				<Image src='cart.png' alt='' />
 			</div>
 		</HeaderContent>
 	);

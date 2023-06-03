@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.button(({ styles }: any) => ({
+export const ButtonContainer = styled.button(({ styles }: any) => ({
 	width: styles.width,
 	height: styles.height,
 	borderRadius: styles.radius,

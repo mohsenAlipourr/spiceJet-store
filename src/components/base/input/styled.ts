@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.input(({ styles }: any) => ({
+export const InputContainer = styled.input(({ styles }: any) => ({
 	width: styles.width,
 	height: styles.height,
 	borderRadius: styles.radius,
