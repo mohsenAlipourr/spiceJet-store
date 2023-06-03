@@ -1,0 +1,12 @@
+import styled from '@emotion/styled';
+
+export const Container = styled.button(({ styles }: any) => ({
+	width: styles.width,
+	height: styles.height,
+	borderRadius: styles.radius,
+	border: styles.borderColor,
+	color: styles.color,
+	background: styles.background,
+	disable: styles.disable,
+	cursor: 'pointer',
+}));
