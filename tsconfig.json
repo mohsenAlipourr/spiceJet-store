@@ -16,6 +16,7 @@
 		"incremental": true,
 		"paths": {
 			"@src/*": ["./src/*"],
+			"@styles/*": ["./src/styles/*"],
 			"@api/*": ["./src/api/*"],
 			"@components/*": ["./src/components/*"],
 			"@base/*": ["./src/components/base/*"]

@@ -1,18 +1,27 @@
 import Head from 'next/head';
-/* import Button from '@base/button';
-import Input from '@base/input'; */
-import Header from '../src/layouts/header';
+import type { GetServerSideProps } from 'next';
+import HomeContent from '@src/components/pages/home';
+import { response } from '@src/constants/home';
+import { HomeDataApiResponse } from '@src/interfaces/home';
 
-const Home = () => {
+type HomeProps = {
+	data: HomeDataApiResponse;
+};
+
+const Home = ({ data }: HomeProps) => {
 	return (
-		<div>
+		<>
 			<Head>
 				<title>spiceJet</title>
 			</Head>
-			{/* <Button>Add To Cart</Button>
-			<Input /> */}
-			<Header />
-		</div>
+
+			<HomeContent data={data} />
+		</>
 	);
 };
+
+export const getServerSideProps: GetServerSideProps<any> = async () => {
+	return { props: { data: response.data } };
+};
+
 export default Home;

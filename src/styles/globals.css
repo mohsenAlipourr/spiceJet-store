@@ -1,3 +1,12 @@
 body {
 	margin: 0;
+	background: white;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: #c1c1c1;
+	border-radius: 20px;
+}
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: #f1f1f1;
 }
