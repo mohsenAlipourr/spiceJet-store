@@ -1,15 +1,7 @@
-import styled from '@emotion/styled';
-
-const Button = styled.button`
-	color: turquoise;
-`;
+import UserCart from '@src/components/pages/userCart';
 
 const Cart = () => {
-	return (
-		<div>
-			<Button>This my button component.</Button>
-		</div>
-	);
+	return <UserCart />;
 };
 
 export default Cart;
