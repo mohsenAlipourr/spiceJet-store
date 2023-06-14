@@ -1,15 +1,7 @@
-import styled from '@emotion/styled';
-
-const Button = styled.button`
-	color: turquoise;
-`;
+import CategoryProduct from '@src/components/pages/categoryProduct';
 
 const Category = () => {
-	return (
-		<div>
-			<Button>This my button component.</Button>
-		</div>
-	);
+	return <CategoryProduct />;
 };
 
 export default Category;
