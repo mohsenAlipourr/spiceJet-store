@@ -4,7 +4,7 @@
 echo '🏗️👷 Styling, testing and building your project before committing'
 
 # Check Prettier standards
-yarn run format:fix && yarn run check-format ||
+yarn run format:fix && yarn run check-format && git add . ||
 (
     echo '🤢🤮🤢🤮 Its F**KING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
             Prettier Check Failed. Run yarn run format, add changes and try commit again.';

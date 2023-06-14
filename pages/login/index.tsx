@@ -1,15 +1,7 @@
-import styled from '@emotion/styled';
-
-const Button = styled.button`
-	color: turquoise;
-`;
+import LoginPage from '@src/components/pages/login';
 
 const Login = () => {
-	return (
-		<div>
-			<Button>This my button component.</Button>
-		</div>
-	);
+	return <LoginPage />;
 };
 
 export default Login;
