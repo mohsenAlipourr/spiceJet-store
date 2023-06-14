@@ -2,10 +2,11 @@ import Image from 'next/image';
 import filter from 'public/icons/filter.png';
 import ProductCategory from '@src/components/base/categoryProducts';
 import Input from '@src/components/base/input';
-import { HeaderCategory, Search, Sidebar, Wrapper } from './styled';
+import { FilterProducts, ProductContent, Products, Search, Sidebar, Wrapper } from './styled';
 
 const CategoryProduct = () => {
 	const list = [
+		{ title: 'masalas', price: '$560' },
 		{ title: 'masalas', price: '$560' },
 		{ title: 'masalas', price: '$560' },
 		{ title: 'masalas', price: '$560' },
@@ -16,8 +17,8 @@ const CategoryProduct = () => {
 
 	return (
 		<Wrapper>
-			<div>
-				<HeaderCategory>
+			<ProductContent>
+				<FilterProducts>
 					<p>
 						Showing {} of {} product
 					</p>
@@ -25,10 +26,12 @@ const CategoryProduct = () => {
 						<span>Filter</span>
 						<Image src={filter} alt='filter' width={18} height={18} />
 					</div>
-				</HeaderCategory>
+				</FilterProducts>
 
-				<ProductCategory list={list} />
-			</div>
+				<Products>
+					<ProductCategory list={list} />
+				</Products>
+			</ProductContent>
 
 			<Sidebar>
 				<Search>

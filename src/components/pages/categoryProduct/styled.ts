@@ -6,12 +6,22 @@ export const Wrapper = styled.div(() => ({
 	marginTop: 60,
 }));
 
-export const HeaderCategory = styled.div(() => ({
+export const ProductContent = styled.div(() => ({
+	width: 1000,
+}));
+
+export const FilterProducts = styled.div(() => ({
 	width: 1000,
 	borderBottom: '3px solid #e0e0e6',
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'space-between',
+}));
+
+export const Products = styled.div(() => ({
+	display: 'flex',
+	justifyContent: 'flex-start',
+	flexWrap: 'wrap',
 }));
 
 export const Search = styled.div(() => ({
@@ -23,4 +33,5 @@ export const Sidebar = styled.div(() => ({
 	display: 'flex',
 	flexDirection: 'column',
 	justifyContent: 'space-between',
+	height: 500,
 }));

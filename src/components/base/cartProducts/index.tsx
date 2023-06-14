@@ -2,7 +2,7 @@ import Image from 'next/image';
 import image from 'public/images/product.png';
 import close from 'public/icons/close.png';
 import Button from '../button';
-import { OrderedProduct, OrderedProductDetails, Total, Wrapper } from './styled';
+import { CounterNumber, OrderedProduct, OrderedProductDetails, ProductCounter, Total, Wrapper } from './styled';
 
 type ProductSlideProps = {
 	list?: any;
@@ -18,11 +18,18 @@ const CartProducts = ({ list }: ProductSlideProps) => {
 
 						<OrderedProductDetails>
 							<span>{item.title}</span>
-							<div>
-								<Button>-</Button>
-								<span>1</span>
-								<Button>+</Button>
-							</div>
+
+							<ProductCounter>
+								<Button borderColor={'none'} width={40} height={35}>
+									-
+								</Button>
+
+								<CounterNumber>1</CounterNumber>
+
+								<Button borderColor={'none'} width={40} height={35}>
+									+
+								</Button>
+							</ProductCounter>
 
 							<Total>Total:{item.total}</Total>
 						</OrderedProductDetails>
