@@ -1,15 +1,7 @@
-import styled from '@emotion/styled';
-
-const Button = styled.button`
-	color: turquoise;
-`;
+import UserProfile from '@src/components/pages/userProfile';
 
 const Profile = () => {
-	return (
-		<div>
-			<Button>This my button component.</Button>
-		</div>
-	);
+	return <UserProfile />;
 };
 
 export default Profile;
