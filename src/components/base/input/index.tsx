@@ -18,7 +18,7 @@ type InputProps = {
 
 const Input = ({
 	name = null,
-	value = '',
+	value,
 	onChange,
 	type = 'text',
 	radius = 7,
@@ -36,12 +36,12 @@ const Input = ({
 			{...props}
 			name={name}
 			value={value}
-			onChange={onChange}
 			type={type}
 			required={isRequired}
 			disabled={disabled}
 			pattern={pattern}
 			placeholder={placeholder}
+			onChange={onChange}
 			styles={{
 				radius,
 				width,
