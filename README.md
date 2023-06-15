@@ -27,6 +27,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ![Redux](https://img.shields.io/badge/-Redux-05122A?style=for-the-badge&logo=redux&logoColor=764ABC)&nbsp;
 ![Emotion](https://img.shields.io/badge/-emotion-05122A?style=for-the-badge&logo=emotion)&nbsp;
 
+## ✔️Features
+* Using Redux toolkit 
+* Fully responsive
+
 ## 📃Pages
 * Main (index)
 * Login/SignUp
