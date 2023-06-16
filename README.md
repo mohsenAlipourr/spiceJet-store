@@ -21,6 +21,7 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 🔧Technologies
+
 ![React](https://img.shields.io/badge/-React-05122A?style=for-the-badge&logo=react)&nbsp;
 ![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=for-the-badge&logo=typescript)&nbsp;
 ![Next.js](https://img.shields.io/badge/-Next.js-05122A?style=for-the-badge&logo=next.js)&nbsp;
@@ -28,14 +29,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ![Emotion](https://img.shields.io/badge/-emotion-05122A?style=for-the-badge&logo=emotion)&nbsp;
 
 ## ✔️Features
-* Using Redux toolkit 
-* Fully responsive
+
+- Using Redux toolkit
+- Fully responsive
 
 ## 📃Pages
-* Main (index)
-* Login/SignUp
-* Products List
-* Product Details
-* Cart
-* Profile
 
+- Main (index)
+- Login/SignUp
+- Products List
+- Product Details
+- Cart
+- Profile

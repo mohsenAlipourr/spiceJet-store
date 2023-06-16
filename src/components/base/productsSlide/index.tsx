@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import image from 'public/images/product.png';
 import loading from 'public/images/loading.gif';
 import Button from '../button';
 import { Products, Product, Title, Contener, ProductPrice } from './styled';
@@ -20,7 +19,7 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 				{list ? (
 					list.map((item: any, index: any) => (
 						<Product key={index}>
-							<Image src={image} alt='image' width={225} height={225} />
+							<Image src={item.image} alt='image' width={225} height={225} />
 
 							<span>{item.title}</span>
 							<ProductPrice>{`$${item.price}`}</ProductPrice>
@@ -29,7 +28,7 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 						</Product>
 					))
 				) : (
-					<Image src={loading} alt='loading' />
+					<></>
 				)}
 			</Products>
 		</Contener>
