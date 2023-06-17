@@ -7,6 +7,7 @@ export const productsData = [
 		price: 550,
 		score: 3,
 		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
 		description: [
@@ -33,6 +34,7 @@ export const productsData = [
 		price: 6050,
 		score: 3,
 		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
 		description: [
