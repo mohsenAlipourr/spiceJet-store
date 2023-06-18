@@ -1,39 +1,30 @@
-export interface HomeApiResponse {
-	data: HomeDataApiResponse;
-	status: number;
-}
+import { StaticImageData } from 'next/image';
 
 export interface HomeDataApiResponse {
 	slider: {
-		link: string;
+		link: StaticImageData;
 		alt: string;
 	};
 	bannerMiddle: {
-		link: string;
+		link: StaticImageData;
 		alt: string;
 	};
 	bannerBottom: {
 		medium: {
-			link: string;
+			link: StaticImageData;
 			alt: string;
 		};
-		small: [
-			{
-				link: string;
-				alt: string;
-			},
-			{
-				link: string;
-				alt: string;
-			},
-		];
+		small: {
+			link: StaticImageData;
+			alt: string;
+		}[];
 	};
 	sliderProducts: {
 		bestOffer: {
 			title: string;
 			list: {
 				id: string;
-				image: string;
+				image: StaticImageData;
 				title: string;
 				price: number;
 			}[];
@@ -43,7 +34,7 @@ export interface HomeDataApiResponse {
 			title: string;
 			list: {
 				id: string;
-				image: string;
+				image: StaticImageData;
 				title: string;
 				price: number;
 			}[];

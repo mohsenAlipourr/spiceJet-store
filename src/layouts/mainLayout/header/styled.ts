@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
+const { black } = theme.colors;
+
 export const HeaderContent = styled.header(() => ({
 	width: '100%',
 	height: '80px',
@@ -23,9 +25,8 @@ export const ListCategories = styled.div(() => ({
 	width: '100%',
 	display: 'flex',
 	justifyContent: 'center',
-	fontFamily: 'sans-serif',
-	fontSize: 23,
-	color: '#2c222a',
+	color: black[100],
+	fontSize: 20,
 }));
 
 export const Category = styled.span(() => ({

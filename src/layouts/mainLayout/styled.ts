@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
+import theme from '@styles/theme';
 
 export const Main = styled.main(() => ({
+	...theme.wrapper,
 	paddingTop: 80,
-	maxWidth: 1480,
-	width: '100%',
-	margin: '0 auto',
 }));
