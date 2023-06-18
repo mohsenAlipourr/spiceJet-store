@@ -14,6 +14,10 @@ export const Form = styled.form(() => ({
 }));
 
 export const Register = styled.div(() => ({
+	'@media (max-width: 600px)': {
+		border: 'none',
+		padding: '0',
+	},
 	border: '3px solid #e0e0e6',
 	height: 400,
 	borderRadius: 7,
@@ -23,6 +27,12 @@ export const Register = styled.div(() => ({
 export const Logo = styled.div(() => ({
 	display: 'flex',
 	justifyContent: 'center',
+}));
+
+export const LoginDescription = styled.div(() => ({
+	fontSize: 18,
+	marginTop: 35,
+	marginBottom: 35,
 }));
 
 export const Password = styled.div(() => ({

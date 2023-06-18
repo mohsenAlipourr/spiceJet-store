@@ -10,6 +10,7 @@ import {
 	CartProfile,
 	OrderText,
 	Orders,
+	User,
 	UserInformation,
 	Wrapper,
 } from './styled';
@@ -19,6 +20,7 @@ const UserProfile = () => {
 		{ title: 'Rosehip Berries', total: '$649.00' },
 		{ title: 'Rosehip Berries', total: '$649.00' },
 	];
+
 	return (
 		<Wrapper>
 			<CartProfile>
@@ -27,7 +29,7 @@ const UserProfile = () => {
 						<Image src={profile} alt='account' />
 
 						<UserInformation>
-							<span>user</span>
+							<User>user</User>
 							<span>09102416098</span>
 						</UserInformation>
 					</AccountContent>

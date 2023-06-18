@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import banner1 from 'public/images/baner1.png';
-import banner2 from 'public/images/baner2.png';
+/* import banerphone from 'public/images/banerphone.png';
+ */ import banner2 from 'public/images/baner2.png';
 import banner3 from 'public/images/baner3.png';
 import banner4 from 'public/images/baner4.png';
 import banner5 from 'public/images/baner5.png';

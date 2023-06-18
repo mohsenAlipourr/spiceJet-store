@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from 'public/images/logo.png';
 import Button from '@src/components/base/button';
 import Input from '@src/components/base/input';
-import { Form, FormButton, LoginWrapper, Logo, Password, Register } from './style';
+import { Form, FormButton, LoginDescription, LoginWrapper, Logo, Password, Register } from './style';
 
 const LoginPage = () => {
 	const [inputValues, setInputValues] = useState({
@@ -29,8 +29,10 @@ const LoginPage = () => {
 					<Image src={logo} alt='logo' />
 				</Logo>
 
-				<p>Hello !</p>
-				<p>Please enter your name and email.</p>
+				<LoginDescription>
+					<p>Hello !</p>
+					<p>Please enter your name and email.</p>
+				</LoginDescription>
 
 				<Form>
 					<Input

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import image from 'public/images/product.png';
 import loading from 'public/images/loading.gif';
 import Button from '../button';
-import { Products, Product, Title, Contener, ProductPrice } from './styled';
+import { Products, Product, Title, Content, ProductPrice, ProductTitle } from './styled';
 
 type ProductSlideProps = {
 	title?: string;
@@ -11,7 +11,7 @@ type ProductSlideProps = {
 
 const ProductSlide = ({ title, list }: ProductSlideProps) => {
 	return (
-		<Contener>
+		<Content>
 			<Title>
 				<span>{title ? title : <Image src={loading} alt='loading' />}</span>
 			</Title>
@@ -22,7 +22,7 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 						<Product key={index}>
 							<Image src={image} alt='image' width={225} height={225} />
 
-							<span>{item.title}</span>
+							<ProductTitle>{item.title}</ProductTitle>
 							<ProductPrice>{`$${item.price}`}</ProductPrice>
 
 							<Button>Add To Cart</Button>
@@ -32,7 +32,7 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 					<Image src={loading} alt='loading' />
 				)}
 			</Products>
-		</Contener>
+		</Content>
 	);
 };
 

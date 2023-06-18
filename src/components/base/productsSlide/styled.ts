@@ -1,11 +1,15 @@
 import styled from '@emotion/styled';
+import theme from '@styles/theme';
+
+const { black, red, blue } = theme.colors;
 
 export const Products = styled.div(() => ({
+	'@media (max-width: 600px)': {
+		overflow: 'scroll',
+		justifyContent: 'flex-start',
+	},
 	display: 'flex',
 	justifyContent: 'center',
-	'@media (max-width: 600px)': {
-		overflow: 'hidden',
-	},
 }));
 
 export const Product = styled.div(() => ({
@@ -18,16 +22,33 @@ export const Title = styled.div(() => ({
 	display: 'flex',
 	justifyContent: 'center',
 	marginBottom: '75px',
-	fontFamily: 'sans-serif',
-	fontSize: 23,
-	color: '#2b2b71',
+	color: blue[500],
+	fontSize: 18,
+	fontWeight: 'bold',
 }));
 
-export const Contener = styled.div(() => ({
+export const Content = styled.div(() => ({
 	margin: '60px 0px 80px 0px',
+}));
+
+export const ProductTitle = styled.span(() => ({
+	color: black[100],
+	fontSize: 18,
 }));
 
 export const ProductPrice = styled.span(() => ({
 	margin: '10px 0px 15px 0px',
-	color: '#cf191a',
+	color: red[400],
+	fontSize: 18,
+}));
+
+export const Subtotal = styled.span(() => ({
+	fontSize: 18,
+	marginRight: 8,
+	color: blue[500],
+}));
+
+export const SubtotalPrice = styled.span(() => ({
+	fontSize: 18,
+	color: red[400],
 }));

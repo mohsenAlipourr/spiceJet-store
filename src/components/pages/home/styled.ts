@@ -2,6 +2,9 @@ import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
 export const DivBanners = styled.div(() => ({
+	'@media (max-width: 600px)': {
+		flexWrap: 'wrap',
+	},
 	display: 'flex',
 	justifyContent: 'center',
 }));
@@ -18,7 +21,6 @@ export const DivBannersLeft = styled.div(() => ({
 
 export const DivBannersRight = styled.div(() => ({
 	cursor: 'pointer',
-
 	'& img': {
 		borderRadius: '10px',
 	},

@@ -1,7 +1,17 @@
 import CartProducts from '@src/components/base/cartProducts';
 import Input from '@src/components/base/input';
 import Button from '@src/components/base/button';
-import { BuyButton, Form, FormInput, ProductsShoppingCart, Wrapper } from './styled';
+import {
+	BuyButton,
+	CartTitle,
+	DescriptionForm,
+	Form,
+	FormInput,
+	FormInputTitle,
+	ProductsShoppingCart,
+	Wrapper,
+} from './styled';
+import { Subtotal, SubtotalPrice } from '@src/components/base/productsSlide/styled';
 
 const UserCart = () => {
 	const userCart = [
@@ -11,33 +21,36 @@ const UserCart = () => {
 	return (
 		<Wrapper>
 			<ProductsShoppingCart>
-				<h2>Products</h2>
+				<CartTitle>Products</CartTitle>
 				<CartProducts list={userCart} />
 			</ProductsShoppingCart>
 
 			<div>
-				<h2>Order Summary</h2>
+				<CartTitle>Order Summary</CartTitle>
 				<Form>
-					<p>Shipping, taxes, and discounts will be calculated at checkout.</p>
+					<DescriptionForm>Shipping, taxes, and discounts will be calculated at checkout.</DescriptionForm>
 
 					<FormInput>
-						<span>Country</span>
+						<FormInputTitle>Country</FormInputTitle>
 						<Input width={340} />
 					</FormInput>
 
 					<FormInput>
-						<span>State</span>
+						<FormInputTitle>State</FormInputTitle>
 						<Input width={340} />
 					</FormInput>
 
 					<FormInput>
-						<span>Zip/Postal Code</span>
+						<FormInputTitle>Zip/Postal Code</FormInputTitle>
 						<Input width={340} />
 					</FormInput>
 
 					<BuyButton>
 						<Button width={145}>Continue shopping</Button>
-						<span> subtotal: $935.00</span>
+						<div>
+							<Subtotal> subtotal:</Subtotal>
+							<SubtotalPrice> $935.00</SubtotalPrice>
+						</div>
 					</BuyButton>
 				</Form>
 			</div>

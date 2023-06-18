@@ -4,9 +4,16 @@ export const Wrapper = styled.div(() => ({
 	display: 'flex',
 	justifyContent: 'center',
 	marginTop: 80,
+	flexWrap: 'wrap',
 }));
 
 export const CartProfile = styled.div(() => ({
+	'@media (max-width: 600px)': {
+		border: 'none',
+		height: 150,
+		marginRight: '0',
+		width: '100%',
+	},
 	width: 400,
 	height: 400,
 	borderRadius: 7,
@@ -33,6 +40,10 @@ export const UserInformation = styled.div(() => ({
 	marginLeft: 15,
 }));
 
+export const User = styled.span(() => ({
+	fontSize: 18,
+}));
+
 export const Orders = styled.div(() => ({
 	display: 'flex',
 	alignItems: 'center',
@@ -43,9 +54,13 @@ export const Orders = styled.div(() => ({
 
 export const OrderText = styled.div(() => ({
 	marginLeft: 10,
+	fontSize: 18,
 }));
 
 export const CartContent = styled.div(() => ({
+	'@media (max-width: 600px)': {
+		border: 'none',
+	},
 	height: 600,
 	width: 700,
 	borderRadius: 7,
