@@ -6,7 +6,19 @@ import share from 'public/icons/share.png';
 import interest from 'public/icons/interest.png';
 import image from 'public/images/product.png';
 import ProductTabs from './productTabs';
-import { AlbumImage, Description, Amount, Product, Wrapper, Price, ButtonBuy, IconProduct, Share } from './styled';
+import {
+	AlbumImage,
+	Description,
+	Amount,
+	Product,
+	Wrapper,
+	Price,
+	ButtonBuy,
+	IconProduct,
+	Share,
+	ProductName,
+	ProductPrice,
+} from './styled';
 
 const ProductContent = () => {
 	return (
@@ -31,7 +43,7 @@ const ProductContent = () => {
 				</AlbumImage>
 
 				<Product>
-					<h1>Rosehip Berries</h1>
+					<ProductName>Rosehip Berries</ProductName>
 
 					<Image src={score} alt='score' />
 
@@ -41,10 +53,10 @@ const ProductContent = () => {
 						pharetras...
 					</Description>
 
-					<Price>
-						price:
+					<ProductPrice>
+						<Price>price:</Price>
 						<Amount>$579.00</Amount>
-					</Price>
+					</ProductPrice>
 
 					<ButtonBuy>
 						<Button width={'335px'} height={'50px'}>

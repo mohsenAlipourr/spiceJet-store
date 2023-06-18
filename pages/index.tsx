@@ -3,6 +3,12 @@ import type { GetServerSideProps } from 'next';
 import HomeContent from '@src/components/pages/home';
 import { response } from '@src/constants/home';
 import { HomeDataApiResponse } from '@src/interfaces/home';
+import { Rubik } from '@next/font/google';
+
+export const title = Rubik({
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+});
 
 type HomeProps = {
 	data: HomeDataApiResponse;

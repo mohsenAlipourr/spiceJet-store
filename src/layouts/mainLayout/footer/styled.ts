@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
+const { black, blue } = theme.colors;
+
 export const FooterContent = styled.footer(() => ({
 	height: '230px',
 	background: ' #e0e0e6',
@@ -28,9 +30,7 @@ export const DivContent = styled.div(() => ({
 
 export const PContent = styled.p(() => ({
 	width: '340px',
-	fontFamily: 'sans-serif',
-	fontSize: 18,
-	color: '#2c222a',
+	color: black[100],
 }));
 
 export const DivContentUs = styled.div(() => ({
@@ -41,9 +41,7 @@ export const DivContentUs = styled.div(() => ({
 }));
 
 export const FooterTitle = styled.h1(() => ({
-	fontFamily: 'sans-serif',
-	fontSize: 28,
-	color: '#2b2b71',
+	color: blue[500],
 }));
 
 export const icon = styled.image(() => ({
@@ -54,7 +52,5 @@ export const icon = styled.image(() => ({
 
 export const SpanContentUs = styled.span(() => ({
 	marginLeft: 10,
-	fontFamily: 'sans-serif',
-	fontSize: 18,
-	color: '#2c222a',
+	color: black[100],
 }));
