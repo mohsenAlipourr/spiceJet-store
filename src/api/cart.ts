@@ -1,6 +1,7 @@
 import { getProductData } from './product';
 
 type CartChangeResponse = {
+	cartTotal?: number;
 	status: 200 | 422;
 };
 
@@ -33,6 +34,7 @@ export const postCartChange = (id: string, total: number) => {
 				localStorage.setItem('cartList', JSON.stringify(cartList));
 
 				const result: CartChangeResponse = {
+					cartTotal: cartList.length,
 					status: 200,
 				};
 

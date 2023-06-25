@@ -11,6 +11,7 @@ type ButtonProps = {
 	borderColor?: string | number;
 	onClick?: any;
 	props?: any;
+	fontSize?: number;
 };
 
 const Button = ({
@@ -23,6 +24,7 @@ const Button = ({
 	disable = false,
 	borderColor = '3px solid #cf191a',
 	onClick,
+	fontSize,
 	...props
 }: ButtonProps) => {
 	return (
@@ -37,6 +39,7 @@ const Button = ({
 				background,
 				borderColor,
 				disable,
+				fontSize,
 			}}
 		>
 			{children}

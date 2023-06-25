@@ -1,5 +1,11 @@
+import { isBrowser } from '@src/utils';
+
 const initialState = {
-	cart: [],
+	data: {
+		cartTotal: null,
+		email: isBrowser ? localStorage.getItem('email') : null,
+		password: isBrowser ? localStorage.getItem('password') : null,
+	},
 };
 
 export default initialState;

@@ -10,11 +10,19 @@ export const DivBanners = styled.div(() => ({
 }));
 
 export const DivBannersLeft = styled.div(() => ({
+	'@media (max-width: 600px)': {
+		marginRight: 0,
+	},
 	display: 'flex',
 	flexDirection: 'column',
 	justifyContent: 'space-between',
 	marginRight: '70px',
 	'& img': {
+		'@media (max-width: 600px)': {
+			width: '100%',
+			height: 'auto',
+			marginTop: 10,
+		},
 		borderRadius: '10px',
 	},
 }));
@@ -22,6 +30,10 @@ export const DivBannersLeft = styled.div(() => ({
 export const DivBannersRight = styled.div(() => ({
 	cursor: 'pointer',
 	'& img': {
+		'@media (max-width: 600px)': {
+			width: '100%',
+			height: 'auto',
+		},
 		borderRadius: '10px',
 	},
 }));

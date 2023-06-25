@@ -1,7 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import loading from 'public/images/loading.gif';
 import Button from '../button';
+/* import { addCart } from '../../../store/globalSlice';
+ */
 import { Products, Product, Title, Content, ProductPrice, ProductTitle } from './styled';
+import { routes } from '@src/constants/routes';
 
 type ProductSlideProps = {
 	title?: string;
@@ -9,6 +13,10 @@ type ProductSlideProps = {
 };
 
 const ProductSlide = ({ title, list }: ProductSlideProps) => {
+	/* 	const dispatch = useDispatch();
+
+	 */
+
 	return (
 		<Content>
 			<Title>
@@ -19,12 +27,14 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 				{list ? (
 					list.map((item: any, index: any) => (
 						<Product key={index}>
-							<Image src={item.image} alt='image' width={225} height={225} />
+							<Link href={routes.product(item.id)}>
+								<Image src={item.image} alt='image' width={225} height={225} />
 
-							<ProductTitle>{item.title}</ProductTitle>
-							<ProductPrice>{`$${item.price}`}</ProductPrice>
+								<ProductTitle>{item.title}</ProductTitle>
+								<ProductPrice>{`$${item.price}`}</ProductPrice>
+							</Link>
 
-							<Button>Add To Cart</Button>
+							<Button /* onClick={() => dispatch(addCart(item))} */>Add To Cart</Button>
 						</Product>
 					))
 				) : (

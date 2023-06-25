@@ -8,4 +8,5 @@ export const globalSlice = createSlice({
 	reducers,
 });
 
+export const { updateGlobalSlice } = globalSlice.actions;
 export default globalSlice.reducer;

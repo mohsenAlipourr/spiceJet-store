@@ -1,7 +1,9 @@
+import { Provider } from 'react-redux';
+import { Varela_Round } from '@next/font/google';
+import { store } from '@src/store';
 import Footer from './footer';
 import Header from './header';
 import { Main } from './styled';
-import { Varela_Round } from '@next/font/google';
 
 export const title = Varela_Round({
 	subsets: ['latin'],
@@ -15,9 +17,11 @@ type MainLayoutProps = {
 const MainLayout = ({ children }: MainLayoutProps) => {
 	return (
 		<div className={title.className}>
-			<Header />
-			<Main>{children}</Main>
-			<Footer />
+			<Provider store={store}>
+				<Header />
+				<Main>{children}</Main>
+				<Footer />
+			</Provider>
 		</div>
 	);
 };
