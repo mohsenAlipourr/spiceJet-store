@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import image from 'public/images/product.png';
+import Link from 'next/link';
 import loading from 'public/images/loading.gif';
 import interest from 'public/icons/interest.png';
 import score from 'public/icons/score.png';
-import Button from '../button';
 import { Product, ProductFavorites, ProductName, ProductPrice, Score } from './styled';
+import { routes } from '@src/constants/routes';
 
 type ProductSlideProps = {
 	title?: string;
@@ -12,26 +12,28 @@ type ProductSlideProps = {
 };
 
 const ProductCategory = ({ list }: ProductSlideProps) => {
+	console.log(list);
+
 	return (
 		<>
 			{list ? (
 				list.map((item: any, index: any) => (
 					<Product key={index}>
-						<Image src={image} alt='image' width={225} height={225} />
+						<Link href={routes.product(item.id)}>
+							<Image src={item.images[0]} alt='image' width={225} height={225} />
 
-						<ProductName>{item.title}</ProductName>
+							<ProductName>{item.title}</ProductName>
 
-						<ProductFavorites>
-							<Score>
-								<Image src={score} alt='score' width={70} height={17} />
-							</Score>
+							<ProductFavorites>
+								<Score>
+									<Image src={score} alt='score' width={70} height={17} />
+								</Score>
 
-							<Image src={interest} alt='interest' width={18} height={18} />
-						</ProductFavorites>
-
-						<ProductPrice>{item.price}</ProductPrice>
-
-						<Button>Add To Cart</Button>
+								<Image src={interest} alt='interest' width={18} height={18} />
+							</ProductFavorites>
+							<ProductPrice>{`$ ${item.price}`}</ProductPrice>
+						</Link>
+						{/* <Button>Add To Cart</Button> */}
 					</Product>
 				))
 			) : (

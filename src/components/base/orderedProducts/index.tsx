@@ -19,24 +19,28 @@ type ProductSlideProps = {
 const OrderedProducts = ({ list }: ProductSlideProps) => {
 	return (
 		<>
-			{list.map((item: any, index: any) => (
-				<Wrapper key={index}>
-					<OrderedProduct>
-						<Image src={image} alt='image' width={150} height={150} />
+			{!list ? (
+				list.map((item: any, index: any) => (
+					<Wrapper key={index}>
+						<OrderedProduct>
+							<Image src={image} alt='image' width={150} height={150} />
 
-						<OrderedProductDetails>
-							<OrderedProductName>{item.title}</OrderedProductName>
+							<OrderedProductDetails>
+								<OrderedProductName>{item.title}</OrderedProductName>
 
-							<PriceProduct>
-								<Total>Total:</Total>
-								<Price> {item.total}</Price>
-							</PriceProduct>
-						</OrderedProductDetails>
-					</OrderedProduct>
+								<PriceProduct>
+									<Total>Total:</Total>
+									<Price> {item.total}</Price>
+								</PriceProduct>
+							</OrderedProductDetails>
+						</OrderedProduct>
 
-					<Image src={accepted} alt='accepted' />
-				</Wrapper>
-			))}
+						<Image src={accepted} alt='accepted' />
+					</Wrapper>
+				))
+			) : (
+				<h3>There is no order</h3>
+			)}
 		</>
 	);
 };

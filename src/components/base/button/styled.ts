@@ -8,5 +8,7 @@ export const ButtonContainer = styled.button(({ styles }: any) => ({
 	color: styles.color,
 	background: styles.background,
 	disable: styles.disable,
+	fontSize: styles.fontSize,
 	cursor: 'pointer',
+	fontFamily: 'inherit',
 }));

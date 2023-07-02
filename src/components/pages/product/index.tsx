@@ -1,11 +1,16 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '@src/components/base/button';
-import ProductSlide from '@src/components/base/productsSlide';
+import { routes } from '@src/constants/routes';
+import { postCartChange } from '@src/api/cart';
 import score from 'public/icons/score.png';
 import share from 'public/icons/share.png';
 import interest from 'public/icons/interest.png';
 import image from 'public/images/product.png';
-import ProductTabs from './productTabs';
+/* import ProductTabs from './productTabs';
+ */ import { updateGlobalSlice } from '../../../store/globalSlice';
+
 import {
 	AlbumImage,
 	Description,
@@ -20,7 +25,27 @@ import {
 	ProductPrice,
 } from './styled';
 
-const ProductContent = () => {
+const ProductContent = ({ data }: any) => {
+	const router = useRouter();
+	const dispatch = useDispatch();
+	const email = useSelector((state: any) => state.globalSlice.data.email);
+	const password = useSelector((state: any) => state.globalSlice.data.password);
+
+	const handleBuy = async () => {
+		if (!email && !password) {
+			router.push(routes.login);
+			return;
+		}
+
+		const response = await postCartChange(data.id, data.price);
+
+		if (response.status === 200) {
+			dispatch(updateGlobalSlice({ cartTotal: response.cartTotal }));
+
+			router.push(routes.cart);
+		}
+	};
+
 	return (
 		<>
 			<Wrapper>
@@ -43,32 +68,26 @@ const ProductContent = () => {
 				</AlbumImage>
 
 				<Product>
-					<ProductName>Rosehip Berries</ProductName>
+					<ProductName>{data.title}</ProductName>
 
 					<Image src={score} alt='score' />
 
-					<Description>
-						Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor,
-						elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo
-						pharetras...
-					</Description>
+					<Description>{data.summery}</Description>
 
 					<ProductPrice>
 						<Price>price:</Price>
-						<Amount>$579.00</Amount>
+						<Amount>{`$ ${data.price}`}</Amount>
 					</ProductPrice>
 
 					<ButtonBuy>
-						<Button width={'335px'} height={'50px'}>
+						<Button width={'335px'} height={'50px'} onClick={handleBuy}>
 							Buy now
 						</Button>
 					</ButtonBuy>
 				</Product>
 			</Wrapper>
 
-			<ProductTabs />
-
-			<ProductSlide />
+			{/* <ProductTabs data={data.description} /> */}
 		</>
 	);
 };

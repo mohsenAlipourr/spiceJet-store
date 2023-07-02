@@ -1,13 +1,21 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
 import profile from 'public/images/profile.png';
-import edit from 'public/icons/edit.png';
-import cart from 'public/icons/cart.png';
+/* import edit from 'public/icons/edit.png';
+ */ import cart from 'public/icons/cart.png';
+import exit from 'public/icons/exit.png';
 import OrderedProducts from '@src/components/base/orderedProducts';
+import { routes } from '@src/constants/routes';
+import { updateGlobalSlice } from '../../../store/globalSlice';
+
 import {
 	Account,
 	AccountContent,
 	CartContent,
 	CartProfile,
+	Exit,
+	ExitText,
 	OrderText,
 	Orders,
 	User,
@@ -15,11 +23,16 @@ import {
 	Wrapper,
 } from './styled';
 
-const UserProfile = () => {
-	const shoppingList = [
-		{ title: 'Rosehip Berries', total: '$649.00' },
-		{ title: 'Rosehip Berries', total: '$649.00' },
-	];
+const UserProfile = ({ data }: any) => {
+	const email = useSelector((state: any) => state.globalSlice.data.email);
+	const dispatch = useDispatch();
+	const router = useRouter();
+
+	const handleLogOut = () => {
+		localStorage.clear();
+		dispatch(updateGlobalSlice({ email: null, password: null }));
+		router.push(routes.home);
+	};
 
 	return (
 		<Wrapper>
@@ -30,11 +43,11 @@ const UserProfile = () => {
 
 						<UserInformation>
 							<User>user</User>
-							<span>09102416098</span>
+							<span>{email}</span>
 						</UserInformation>
 					</AccountContent>
 
-					<Image src={edit} alt='edit' />
+					{/* <Image src={edit} alt='edit' /> */}
 				</Account>
 
 				<div>
@@ -44,10 +57,18 @@ const UserProfile = () => {
 						<OrderText>Orders</OrderText>
 					</Orders>
 				</div>
+
+				<div>
+					<Exit onClick={handleLogOut}>
+						<Image src={exit} alt='exit' width={20} height={20} />
+
+						<ExitText>Exit</ExitText>
+					</Exit>
+				</div>
 			</CartProfile>
 
 			<CartContent>
-				<OrderedProducts list={shoppingList}></OrderedProducts>
+				<OrderedProducts list={data}></OrderedProducts>
 			</CartContent>
 		</Wrapper>
 	);

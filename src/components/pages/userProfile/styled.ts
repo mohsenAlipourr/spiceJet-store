@@ -57,6 +57,20 @@ export const OrderText = styled.div(() => ({
 	fontSize: 18,
 }));
 
+export const Exit = styled.div(() => ({
+	display: 'flex',
+	alignItems: 'center',
+	marginTop: 20,
+	borderBottom: '3px solid #e0e0e6',
+	paddingBottom: 20,
+	cursor: 'pointer',
+}));
+
+export const ExitText = styled.div(() => ({
+	marginLeft: 10,
+	fontSize: 18,
+}));
+
 export const CartContent = styled.div(() => ({
 	'@media (max-width: 600px)': {
 		border: 'none',

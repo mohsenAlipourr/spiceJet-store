@@ -16,6 +16,12 @@ export const Product = styled.div(() => ({
 	display: 'flex',
 	flexDirection: 'column',
 	alignItems: 'center',
+	'& a': {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		textDecoration: 'none',
+	},
 }));
 
 export const Title = styled.div(() => ({

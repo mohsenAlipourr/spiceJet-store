@@ -25,19 +25,14 @@ export const ListCategories = styled.div(() => ({
 	width: '100%',
 	display: 'flex',
 	justifyContent: 'center',
-	color: black[100],
 	fontSize: 20,
+	'& a': {
+		textDecoration: 'none',
+		color: black[100],
+	},
 }));
 
 export const Category = styled.span(() => ({
 	cursor: 'pointer',
 	marginRight: 40,
-}));
-
-export const DivIcon = styled.div(() => ({
-	display: 'flex',
-}));
-
-export const DivIconCart = styled.div(() => ({
-	marginLeft: ' 15px',
 }));

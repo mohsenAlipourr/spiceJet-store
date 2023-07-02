@@ -1,6 +1,4 @@
 import Image from 'next/image';
-/* import banerphone from 'public/images/banerphone.png';
- */
 import ProductSlide from '../../base/productsSlide';
 import { BannerFullWidth, DivBanners, DivBannersLeft, DivBannersRight, HomeWrapper } from './styled';
 import { HomeDataApiResponse } from '@src/interfaces/home';

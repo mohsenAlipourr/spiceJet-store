@@ -9,6 +9,12 @@ export const Product = styled.div(() => ({
 	alignItems: 'center',
 	marginRight: 80,
 	marginTop: 40,
+	'& a': {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		textDecoration: 'none',
+	},
 }));
 
 export const ProductName = styled.div(() => ({
