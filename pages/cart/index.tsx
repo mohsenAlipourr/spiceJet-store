@@ -1,15 +1,16 @@
+import { useEffect, useState } from 'react';
 import { getCartList } from '@src/api/cart';
 import UserCart from '@src/components/pages/userCart';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { routes } from '@src/constants/routes';
 
-const Cart = (/* props: any */) => {
+const Cart = () => {
+	const [cartList, setCartList] = useState([]);
 	const router = useRouter();
 
 	const getCart = async () => {
 		const response = await getCartList();
-		console.log(response);
+		setCartList(response.data);
 	};
 
 	useEffect(() => {
@@ -23,7 +24,7 @@ const Cart = (/* props: any */) => {
 		}
 	}, []);
 
-	return <UserCart />;
+	return <UserCart cartList={cartList} setCartList={setCartList} />;
 };
 
 export default Cart;

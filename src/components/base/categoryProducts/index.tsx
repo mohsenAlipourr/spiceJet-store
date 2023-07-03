@@ -12,8 +12,6 @@ type ProductSlideProps = {
 };
 
 const ProductCategory = ({ list }: ProductSlideProps) => {
-	console.log(list);
-
 	return (
 		<>
 			{list ? (

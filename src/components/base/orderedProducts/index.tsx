@@ -1,39 +1,31 @@
 import Image from 'next/image';
-import image from 'public/images/product.png';
 import accepted from 'public/icons/accepted.png';
 
-import {
-	OrderedProduct,
-	OrderedProductDetails,
-	OrderedProductName,
-	Price,
-	PriceProduct,
-	Total,
-	Wrapper,
-} from './styled';
+import { Wrapper } from './styled';
+import { useEffect, useState } from 'react';
+import { getMyOrders } from '@src/api/order';
+import OrderedProduct from './orderedProduct';
 
-type ProductSlideProps = {
-	list?: any;
-};
+const OrderedProducts = () => {
+	const [orders, setOrders] = useState([]);
 
-const OrderedProducts = ({ list }: ProductSlideProps) => {
+	const getCart = async () => {
+		const response = await getMyOrders();
+		setOrders(response.data);
+	};
+
+	useEffect(() => {
+		getCart();
+	}, []);
+
+	console.log(orders);
+
 	return (
 		<>
-			{!list ? (
-				list.map((item: any, index: any) => (
+			{orders.length ? (
+				orders.map((item: any, index: any) => (
 					<Wrapper key={index}>
-						<OrderedProduct>
-							<Image src={image} alt='image' width={150} height={150} />
-
-							<OrderedProductDetails>
-								<OrderedProductName>{item.title}</OrderedProductName>
-
-								<PriceProduct>
-									<Total>Total:</Total>
-									<Price> {item.total}</Price>
-								</PriceProduct>
-							</OrderedProductDetails>
-						</OrderedProduct>
+						<OrderedProduct list={item.products}></OrderedProduct>
 
 						<Image src={accepted} alt='accepted' />
 					</Wrapper>
