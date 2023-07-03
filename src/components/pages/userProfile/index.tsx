@@ -23,7 +23,7 @@ import {
 	Wrapper,
 } from './styled';
 
-const UserProfile = ({ data }: any) => {
+const UserProfile = () => {
 	const email = useSelector((state: any) => state.globalSlice.data.email);
 	const dispatch = useDispatch();
 	const router = useRouter();
@@ -68,7 +68,7 @@ const UserProfile = ({ data }: any) => {
 			</CartProfile>
 
 			<CartContent>
-				<OrderedProducts list={data}></OrderedProducts>
+				<OrderedProducts></OrderedProducts>
 			</CartContent>
 		</Wrapper>
 	);

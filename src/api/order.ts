@@ -1,3 +1,5 @@
+import { getProductData } from './product';
+
 type CartChangeResponse = {
 	status: 201 | 422;
 };
@@ -42,6 +44,14 @@ export const getMyOrders = () => {
 		try {
 			const cartListLocalStorage = localStorage.getItem('myOrders') || '[]';
 			const cartList = JSON.parse(cartListLocalStorage) || [];
+
+			cartList.forEach(async (item: any, index: number) => {
+				item.products.forEach(async (product: any, indexProduct: number) => {
+					const response = await getProductData(product.id);
+
+					cartList[index].products[indexProduct] = { ...response.data, ...cartList[indexProduct] };
+				});
+			});
 
 			const result: CartListResponse = {
 				data: cartList,

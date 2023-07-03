@@ -63,7 +63,7 @@ export const getCartList = () => {
 
 			cartList.forEach(async (item: any, index: number) => {
 				const response = await getProductData(item.id);
-				cartList[index] = response.data;
+				cartList[index] = { ...response.data, ...cartList[index] };
 			});
 
 			const result: CartListResponse = {

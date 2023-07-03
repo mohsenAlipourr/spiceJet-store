@@ -7,7 +7,6 @@ import { postCartChange } from '@src/api/cart';
 import score from 'public/icons/score.png';
 import share from 'public/icons/share.png';
 import interest from 'public/icons/interest.png';
-import image from 'public/images/product.png';
 /* import ProductTabs from './productTabs';
  */ import { updateGlobalSlice } from '../../../store/globalSlice';
 
@@ -37,7 +36,7 @@ const ProductContent = ({ data }: any) => {
 			return;
 		}
 
-		const response = await postCartChange(data.id, data.price);
+		const response = await postCartChange(data.id, 1);
 
 		if (response.status === 200) {
 			dispatch(updateGlobalSlice({ cartTotal: response.cartTotal }));
@@ -58,12 +57,12 @@ const ProductContent = ({ data }: any) => {
 						</Share>
 					</IconProduct>
 
-					<Image src={image} alt='image' width={300} height={300} />
+					<Image src={data.images[0]} alt='image' width={300} height={300} />
 
 					<div>
-						<Image src={image} alt='image' width={100} height={100} />
-						<Image src={image} alt='image' width={100} height={100} />
-						<Image src={image} alt='image' width={100} height={100} />
+						{data.images.map((item: any, index: any) => (
+							<Image src={item} alt='image' width={100} height={100} key={index} />
+						))}
 					</div>
 				</AlbumImage>
 

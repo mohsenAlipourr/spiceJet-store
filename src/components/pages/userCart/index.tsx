@@ -1,6 +1,11 @@
-import CartProducts from '@src/components/base/cartProducts';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import CartProducts from '@src/components/pages/userCart/cartProducts';
 import Input from '@src/components/base/input';
 import Button from '@src/components/base/button';
+import { postNewOrder } from '@src/api/order';
+import { routes } from '@src/constants/routes';
+
 import {
 	BuyButton,
 	CartTitle,
@@ -10,51 +15,91 @@ import {
 	FormInputTitle,
 	ProductsShoppingCart,
 	Wrapper,
+	/* Subtotal,
+	SubtotalPrice, */
 } from './styled';
-import { Subtotal, SubtotalPrice } from '@src/components/base/productsSlide/styled';
 
-const UserCart = () => {
-	const userCart = [
-		{ title: 'Rosehip Berries', total: '$649.00' },
-		{ title: 'Rosehip Berries', total: '$649.00' },
-	];
+const UserCart = ({ cartList, setCartList }: any) => {
+	const [inputValues, setInputValues] = useState({
+		country: '',
+		state: '',
+		postalCode: '',
+	});
+	const router = useRouter();
+
+	const handleChange = (e: any) => {
+		const { name, value } = e.target;
+
+		setInputValues((prev) => {
+			return {
+				...prev,
+				[name]: value,
+			};
+		});
+	};
+
+	const handleSubmitForm = async () => {
+		const response = await postNewOrder(inputValues.country, inputValues.state, inputValues.postalCode);
+
+		if (response.status === 201) {
+			router.push(routes.profile);
+		} else {
+			alert('test');
+		}
+	};
+
+	/* const sum = cartList.reduce((acc: any, curr: any) => {
+		acc += curr.price;
+		return acc;
+	}, 0); */
+
 	return (
-		<Wrapper>
-			<ProductsShoppingCart>
-				<CartTitle>Products</CartTitle>
-				<CartProducts list={userCart} />
-			</ProductsShoppingCart>
+		<>
+			{cartList.length ? (
+				<Wrapper>
+					<ProductsShoppingCart>
+						<CartTitle>Products</CartTitle>
 
-			<div>
-				<CartTitle>Order Summary</CartTitle>
-				<Form>
-					<DescriptionForm>Shipping, taxes, and discounts will be calculated at checkout.</DescriptionForm>
+						<CartProducts cartList={cartList} setCartList={setCartList} />
+					</ProductsShoppingCart>
 
-					<FormInput>
-						<FormInputTitle>Country</FormInputTitle>
-						<Input width={340} />
-					</FormInput>
+					<div>
+						<CartTitle>Order Summary</CartTitle>
+						<Form>
+							<DescriptionForm>Shipping, taxes, and discounts will be calculated at checkout.</DescriptionForm>
 
-					<FormInput>
-						<FormInputTitle>State</FormInputTitle>
-						<Input width={340} />
-					</FormInput>
+							<FormInput>
+								<FormInputTitle>Country</FormInputTitle>
+								<Input width={340} name='country' value={inputValues.country} onChange={handleChange} />
+							</FormInput>
 
-					<FormInput>
-						<FormInputTitle>Zip/Postal Code</FormInputTitle>
-						<Input width={340} />
-					</FormInput>
+							<FormInput>
+								<FormInputTitle>State</FormInputTitle>
+								<Input width={340} name='state' value={inputValues.state} onChange={handleChange} />
+							</FormInput>
 
-					<BuyButton>
-						<Button width={145}>Continue shopping</Button>
-						<div>
-							<Subtotal> subtotal:</Subtotal>
-							<SubtotalPrice> $935.00</SubtotalPrice>
-						</div>
-					</BuyButton>
-				</Form>
-			</div>
-		</Wrapper>
+							<FormInput>
+								<FormInputTitle>Zip/Postal Code</FormInputTitle>
+								<Input width={340} name='postalCode' value={inputValues.postalCode} onChange={handleChange} />
+							</FormInput>
+
+							<BuyButton>
+								<Button width={145} onClick={handleSubmitForm}>
+									Continue shopping
+								</Button>
+								{/* <div>
+									<Subtotal> subtotal:</Subtotal>
+
+									<SubtotalPrice>{`$${sum}`}</SubtotalPrice>
+								</div> */}
+							</BuyButton>
+						</Form>
+					</div>
+				</Wrapper>
+			) : (
+				<span>Shopping basket is empty</span>
+			)}
+		</>
 	);
 };
 

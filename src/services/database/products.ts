@@ -1,4 +1,52 @@
-import bestOfferImage from 'public/images/products/Barberry1.png';
+import Barberry1 from 'public/images/products/Barberry1.png';
+import Barberry2 from 'public/images/products/Barberry2.png';
+import BlackCardamom1 from 'public/images/products/Black-Cardamom1.png';
+import BlackCardamom2 from 'public/images/products/Black-Cardamom2.png';
+import BlackMustard1 from 'public/images/products/Black-Mustard1.png';
+import BlackMustard2 from 'public/images/products/Black-Mustard2.png';
+import BlackSesame1 from 'public/images/products/Black-Sesame1.png';
+import Cardamom1 from 'public/images/products/Cardamom1.png';
+import Cardamom2 from 'public/images/products/Cardamom2.png';
+import Cinnamon1 from 'public/images/products/Cinnamon1.png';
+import Cinnamon2 from 'public/images/products/Cinnamon2.png';
+import Clove1 from 'public/images/products/Clove1.png';
+import Clove2 from 'public/images/products/Clove2.png';
+import Coriander1 from 'public/images/products/Coriander1.png';
+import Coriander2 from 'public/images/products/Coriander2.png';
+import CubebPepper1 from 'public/images/products/Cubeb-Pepper1.png';
+import CubebPepper2 from 'public/images/products/Cubeb-Pepper2.png';
+import DillSeeds1 from 'public/images/products/Dill-Seeds1.png';
+import DillSeeds2 from 'public/images/products/Dill-Seeds2.png';
+import DriedGinger1 from 'public/images/products/Dried-Ginger1.png';
+import DriedGinger2 from 'public/images/products/Dried-Ginger2.png';
+import DriedRosemary1 from 'public/images/products/Dried-Rosemary1.png';
+import DriedRosemary2 from 'public/images/products/Dried-Rosemary2.png';
+import FennelSeeds1 from 'public/images/products/Fennel-Seeds1.png';
+import FennelSeeds2 from 'public/images/products/Fennel-Seeds2.png';
+import FenugreekDal1 from 'public/images/products/Fenugreek-Dal1.png';
+import FenugreekDal2 from 'public/images/products/Fenugreek-Dal2.png';
+import GreenPeppercorn1 from 'public/images/products/Green-Peppercorn1.png';
+import GreenPeppercorn2 from 'public/images/products/Green-Peppercorn2.png';
+import Nutmeg1 from 'public/images/products/Nutmeg1.png';
+import Nutmeg2 from 'public/images/products/Nutmeg2.png';
+import Pimento1 from 'public/images/products/Pimento1.png';
+import Pimento2 from 'public/images/products/Pimento2.png';
+import PippaliPepper1 from 'public/images/products/Pippali-Pepper1.png';
+import PippaliPepper2 from 'public/images/products/Pippali-Pepper2.png';
+import RedChilly1 from 'public/images/products/Red-Chilly1.png';
+import RedChilly2 from 'public/images/products/Red-Chilly2.png';
+import RedPaprika1 from 'public/images/products/Red-Paprika1.png';
+import RedPaprika2 from 'public/images/products/Red-Paprika2.png';
+import RosehipBerries1 from 'public/images/products/Rosehip-Berries1.png';
+import RosehipBerries2 from 'public/images/products/Rosehip-Berries2.png';
+import Saffron1 from 'public/images/products/Saffron1.png';
+import Saffron2 from 'public/images/products/Saffron2.png';
+import SesameSeeds1 from 'public/images/products/Sesame-Seeds1.png';
+import SesameSeeds2 from 'public/images/products/Sesame-Seeds2.png';
+import StarAnise1 from 'public/images/products/Star-Anise1.png';
+import StarAnise2 from 'public/images/products/Star-Anise2.png';
+import WhiteMustard1 from 'public/images/products/White-Mustard1.png';
+import WhiteMustard2 from 'public/images/products/White-Mustard2.png';
 
 export const productsData = [
 	{
@@ -6,7 +54,7 @@ export const productsData = [
 		title: 'barberry',
 		price: 570,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Barberry1, Barberry2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -33,7 +81,7 @@ export const productsData = [
 		title: 'black cardamom',
 		price: 840,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [BlackCardamom1, BlackCardamom2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -60,7 +108,7 @@ export const productsData = [
 		title: 'black mustard',
 		price: 210,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [BlackMustard1, BlackMustard2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -87,7 +135,7 @@ export const productsData = [
 		title: 'black sesame',
 		price: 400,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [BlackSesame1],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -114,7 +162,7 @@ export const productsData = [
 		title: 'cardamom',
 		price: 753,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Cardamom1, Cardamom2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -141,7 +189,7 @@ export const productsData = [
 		title: 'cinnamon',
 		price: 654,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Cinnamon1, Cinnamon2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -168,7 +216,7 @@ export const productsData = [
 		title: 'clove',
 		price: 985,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Clove1, Clove2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -195,7 +243,7 @@ export const productsData = [
 		title: 'coriander',
 		price: 247,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Coriander1, Coriander2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -222,7 +270,7 @@ export const productsData = [
 		title: 'cubeb pepper',
 		price: 621,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [CubebPepper1, CubebPepper2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -249,7 +297,7 @@ export const productsData = [
 		title: 'dill seeds',
 		price: 258,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [DillSeeds1, DillSeeds2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -276,7 +324,7 @@ export const productsData = [
 		title: 'dried ginger',
 		price: 789,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [DriedGinger1, DriedGinger2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -303,7 +351,7 @@ export const productsData = [
 		title: 'dried rosemary',
 		price: 120,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [DriedRosemary1, DriedRosemary2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -330,7 +378,7 @@ export const productsData = [
 		title: 'fennel seeds',
 		price: 320,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [FennelSeeds1, FennelSeeds2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -357,7 +405,7 @@ export const productsData = [
 		title: 'fenugreek dal',
 		price: 250,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [FenugreekDal1, FenugreekDal2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -384,7 +432,7 @@ export const productsData = [
 		title: 'green peppercorn',
 		price: 120,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [GreenPeppercorn1, GreenPeppercorn2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -411,7 +459,7 @@ export const productsData = [
 		title: 'nutmeg',
 		price: 406,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Nutmeg1, Nutmeg2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -438,7 +486,7 @@ export const productsData = [
 		title: 'pimento',
 		price: 783,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Pimento1, Pimento2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -465,7 +513,7 @@ export const productsData = [
 		title: 'pippali pepper',
 		price: 514,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [PippaliPepper1, PippaliPepper2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -492,7 +540,7 @@ export const productsData = [
 		title: 'red chilly',
 		price: 760,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [RedChilly1, RedChilly2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -519,7 +567,7 @@ export const productsData = [
 		title: 'red paprika',
 		price: 250,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [RedPaprika1, RedPaprika2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -546,7 +594,7 @@ export const productsData = [
 		title: 'rosehip berries',
 		price: 240,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [RosehipBerries1, RosehipBerries2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -573,7 +621,7 @@ export const productsData = [
 		title: 'saffron',
 		price: 438,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [Saffron1, Saffron2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -600,7 +648,7 @@ export const productsData = [
 		title: 'sesame seeds',
 		price: 250,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [SesameSeeds1, SesameSeeds2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -627,7 +675,7 @@ export const productsData = [
 		title: 'star anise',
 		price: 450,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [StarAnise1, StarAnise2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
@@ -654,7 +702,7 @@ export const productsData = [
 		title: 'white mustard',
 		price: 360,
 		score: 3,
-		images: [bestOfferImage, bestOfferImage, bestOfferImage],
+		images: [WhiteMustard1, WhiteMustard2],
 		category: 'masalas',
 		summery:
 			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',

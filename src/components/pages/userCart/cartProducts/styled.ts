@@ -11,6 +11,9 @@ export const Wrapper = styled.div(() => ({
 	padding: 9,
 	marginTop: 20,
 	width: 520,
+	'& img': {
+		cursor: 'pointer',
+	},
 }));
 
 export const OrderedProduct = styled.div(() => ({
@@ -45,7 +48,10 @@ export const Price = styled.span(() => ({
 }));
 
 export const ProductCounter = styled.div(() => ({
-	width: 91,
+	width: 100,
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
 	border: '3px solid #e0e0e6',
 	borderRadius: 7,
 	marginTop: 30,
