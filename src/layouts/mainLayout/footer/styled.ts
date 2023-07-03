@@ -4,7 +4,6 @@ import theme from '@styles/theme';
 const { black, blue } = theme.colors;
 
 export const FooterContent = styled.footer(() => ({
-	height: '230px',
 	background: ' #e0e0e6',
 	display: 'flex',
 	alignItems: 'center',
@@ -15,21 +14,31 @@ export const FooterContent = styled.footer(() => ({
 export const FooterWrapper = styled.div(() => ({
 	...theme.wrapper,
 	position: 'relative',
+	padding: '14px 20px',
 }));
 
 export const DivLogo = styled.div(() => ({
 	position: 'absolute',
-	bottom: '172px',
+	top: '-24px',
 }));
 
 export const DivContent = styled.div(() => ({
 	display: 'flex',
 	justifyContent: 'space-evenly',
 	alignItems: 'center',
+
+	'@media (max-width: 600px)': {
+		flexDirection: 'column',
+		alignItems: 'flex-start',
+	},
+}));
+
+export const DivContentWrapper = styled.div(() => ({
+	margin: '0 10px',
 }));
 
 export const PContent = styled.p(() => ({
-	width: '340px',
+	maxWidth: '340px',
 	color: black[100],
 }));
 

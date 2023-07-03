@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import filter from 'public/icons/filter.png';
-import ProductCategory from '@src/components/base/categoryProducts';
-/* import Input from '@src/components/base/input';
- */ import { FilterProducts, ProductContent, Products, /*  Search, Sidebar, */ Wrapper } from './styled';
+/* import Input from '@src/components/base/input'; */
+import ProductCategory from './ProductCategory';
+import { FilterProducts, ProductContent, Products, /*  Search, Sidebar, */ Wrapper } from './styled';
 
 const CategoryProduct = ({ data }: any) => {
 	return (

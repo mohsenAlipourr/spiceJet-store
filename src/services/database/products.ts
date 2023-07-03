@@ -724,4 +724,253 @@ export const productsData = [
 			},
 		],
 	},
+
+	// chat-masala
+	{
+		id: 'sp-35',
+		title: 'white mustard',
+		price: 70,
+		score: 3,
+		images: [WhiteMustard1, WhiteMustard2],
+		category: 'chat-masalas',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+	{
+		id: 'sp-36',
+		title: 'cardamom',
+		price: 46,
+		score: 3,
+		images: [Cardamom1, Cardamom2],
+		category: 'chat-masalas',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+	{
+		id: 'sp-37',
+		title: 'cinnamon',
+		price: 54,
+		score: 4,
+		images: [Cinnamon1, Cinnamon2],
+		category: 'chat-masalas',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+
+	// pepper-Powder
+	{
+		id: 'sp-38',
+		title: 'black mustard pepper',
+		price: 26,
+		score: 3,
+		images: [BlackMustard1, BlackMustard2],
+		category: 'pepper-Powder',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+	{
+		id: 'sp-39',
+		title: 'black sesame pepper',
+		price: 58,
+		score: 3,
+		images: [BlackSesame1],
+		category: 'pepper-Powder',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+
+	// cooking-essentials
+	{
+		id: 'sp-40',
+		title: 'cardamom cooking essentials',
+		price: 36,
+		score: 3,
+		images: [Cardamom1, Cardamom2],
+		category: 'cooking-essentials',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+	{
+		id: 'sp-41',
+		title: 'dried rosemary',
+		price: 75,
+		score: 3,
+		images: [DriedRosemary1, DriedRosemary2],
+		category: 'cooking-essentials',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+	{
+		id: 'sp-42',
+		title: 'fennel seeds',
+		price: 86,
+		score: 3,
+		images: [FennelSeeds1, FennelSeeds2],
+		category: 'cooking-essentials',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
+	{
+		id: 'sp-43',
+		title: 'fenugreek dal',
+		price: 763,
+		score: 3,
+		images: [FenugreekDal1, FenugreekDal2],
+		category: 'cooking-essentials',
+		summery:
+			'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...',
+		description: [
+			{
+				title: 'Description',
+				content:
+					'Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet',
+				content:
+					'Sonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy.',
+			},
+			{
+				title: 'Sample Paragraph Text',
+				content:
+					'Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue.',
+			},
+		],
+	},
 ];

@@ -32,7 +32,6 @@ export const Form = styled.div(() => ({
 	border: '3px solid #e0e0e6',
 	borderRadius: 7,
 	width: 350,
-	height: 460,
 	padding: 20,
 }));
 

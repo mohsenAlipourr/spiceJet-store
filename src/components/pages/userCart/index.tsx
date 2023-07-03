@@ -70,17 +70,23 @@ const UserCart = ({ cartList, setCartList }: any) => {
 
 							<FormInput>
 								<FormInputTitle>Country</FormInputTitle>
-								<Input width={340} name='country' value={inputValues.country} onChange={handleChange} />
+								<Input width='100%' height={50} name='country' value={inputValues.country} onChange={handleChange} />
 							</FormInput>
 
 							<FormInput>
 								<FormInputTitle>State</FormInputTitle>
-								<Input width={340} name='state' value={inputValues.state} onChange={handleChange} />
+								<Input width='100%' height={50} name='state' value={inputValues.state} onChange={handleChange} />
 							</FormInput>
 
 							<FormInput>
 								<FormInputTitle>Zip/Postal Code</FormInputTitle>
-								<Input width={340} name='postalCode' value={inputValues.postalCode} onChange={handleChange} />
+								<Input
+									width='100%'
+									height={50}
+									name='postalCode'
+									value={inputValues.postalCode}
+									onChange={handleChange}
+								/>
 							</FormInput>
 
 							<BuyButton>

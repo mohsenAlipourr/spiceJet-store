@@ -3,7 +3,7 @@ import banner2 from 'public/images/baner2.png';
 import banner3 from 'public/images/baner3.png';
 import banner4 from 'public/images/baner4.png';
 import banner5 from 'public/images/baner5.png';
-import bestOfferImage from 'public/images/product.png';
+import { productsData } from './products';
 
 export const homeData = {
 	slider: {
@@ -33,50 +33,12 @@ export const homeData = {
 	sliderProducts: {
 		bestOffer: {
 			title: 'Best Offer Products',
-			list: [
-				{
-					id: 'sp-12',
-					image: bestOfferImage,
-					title: 'example product',
-					price: 569.0,
-				},
-				{
-					id: 'sp-13',
-					image: bestOfferImage,
-					title: 'example product 2',
-					price: 6050,
-				},
-				{
-					id: 'sp-14',
-					image: bestOfferImage,
-					title: 'example product 3',
-					price: 6070,
-				},
-			],
+			list: [productsData[18], productsData[13], productsData[20]],
 		},
 
 		bestSelling: {
 			title: 'Best Selling Products',
-			list: [
-				{
-					id: 'sp-12',
-					image: bestOfferImage,
-					title: 'example product',
-					price: 569.0,
-				},
-				{
-					id: 'sp-13',
-					image: bestOfferImage,
-					title: 'example product 2',
-					price: 6050,
-				},
-				{
-					id: 'sp-14',
-					image: bestOfferImage,
-					title: 'example product 3',
-					price: 6070,
-				},
-			],
+			list: [productsData[17], productsData[30], productsData[27]],
 		},
 	},
 };

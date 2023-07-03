@@ -3,6 +3,7 @@ import { getCartList } from '@src/api/cart';
 import UserCart from '@src/components/pages/userCart';
 import { useRouter } from 'next/router';
 import { routes } from '@src/constants/routes';
+import Head from 'next/head';
 
 const Cart = () => {
 	const [cartList, setCartList] = useState([]);
@@ -24,7 +25,15 @@ const Cart = () => {
 		}
 	}, []);
 
-	return <UserCart cartList={cartList} setCartList={setCartList} />;
+	return (
+		<>
+			<Head>
+				<title>spiceJet - Cart</title>
+			</Head>
+
+			<UserCart cartList={cartList} setCartList={setCartList} />
+		</>
+	);
 };
 
 export default Cart;

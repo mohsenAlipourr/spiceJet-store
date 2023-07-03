@@ -12,23 +12,28 @@ const BoxLogin = dynamic(() => import('./boxLogin'), {
 	ssr: false,
 });
 
+const listCategory = [
+	{ title: 'masalas', link: 'masalas' },
+	{ title: 'chat masalas', link: 'chat-masalas' },
+	{ title: 'pepper Powder', link: 'pepper-Powder' },
+	{ title: 'cooking Essentials', link: 'cooking-essentials' },
+	{ title: 'refund Oil', link: 'refund-oil' },
+];
+
 const Header = () => {
-	const listCategory = [
-		{ title: 'masalas', link: 'masalas' },
-		{ title: 'chat masalas', link: 'masalas' },
-		{ title: 'pepper Powder', link: 'masalas' },
-		{ title: 'cooking Essentials', link: 'masalas' },
-		{ title: 'refund Oil', link: 'masalas' },
-	];
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		const cartList = JSON.parse(localStorage.getItem('cartList') || '');
 		const email = localStorage.getItem('email');
 		const password = localStorage.getItem('password');
 
-		dispatch(updateGlobalSlice({ cartTotal: cartList?.length, email: email, password: password }));
+		if (email && password) {
+			const cartList = JSON.parse(localStorage.getItem('cartList') || '');
+
+			dispatch(updateGlobalSlice({ cartTotal: cartList?.length, email: email, password: password }));
+		}
 	}, []);
+
 	return (
 		<HeaderContent>
 			<HeaderWrapper>

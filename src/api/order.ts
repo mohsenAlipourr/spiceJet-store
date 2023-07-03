@@ -49,7 +49,7 @@ export const getMyOrders = () => {
 				item.products.forEach(async (product: any, indexProduct: number) => {
 					const response = await getProductData(product.id);
 
-					cartList[index].products[indexProduct] = { ...response.data, ...cartList[indexProduct] };
+					cartList[index].products[indexProduct] = { ...response.data, ...cartList[index].products[indexProduct] };
 				});
 			});
 

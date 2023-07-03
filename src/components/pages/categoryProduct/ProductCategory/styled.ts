@@ -7,8 +7,8 @@ export const Product = styled.div(() => ({
 	display: 'flex',
 	flexDirection: 'column',
 	alignItems: 'center',
-	marginRight: 80,
-	marginTop: 40,
+	margin: '20px 10px',
+
 	'& a': {
 		display: 'flex',
 		flexDirection: 'column',

@@ -11,7 +11,8 @@ export const ProductContent = styled.div(() => ({
 }));
 
 export const FilterProducts = styled.div(() => ({
-	width: 1000,
+	width: '100%',
+	maxWidth: 1000,
 	borderBottom: '3px solid #e0e0e6',
 	display: 'flex',
 	alignItems: 'center',
@@ -20,7 +21,7 @@ export const FilterProducts = styled.div(() => ({
 
 export const Products = styled.div(() => ({
 	display: 'flex',
-	justifyContent: 'flex-start',
+	justifyContent: 'center',
 	flexWrap: 'wrap',
 }));
 

@@ -12,6 +12,7 @@ import {
 	FooterWrapper,
 	PContent,
 	SpanContentUs,
+	DivContentWrapper,
 } from './styled';
 
 const Footer = () => {
@@ -25,14 +26,14 @@ const Footer = () => {
 				</DivLogo>
 
 				<DivContent>
-					<div>
+					<DivContentWrapper>
 						<FooterTitle>About us</FooterTitle>
 						<PContent>
 							Pellentesque posuere orci lobortis scelerisque blandit. Donec id telus lacinia an, tincidunt risus ac.
 						</PContent>
-					</div>
+					</DivContentWrapper>
 
-					<div>
+					<DivContentWrapper>
 						<FooterTitle>Contact us</FooterTitle>
 
 						<DivContentUs>
@@ -44,7 +45,7 @@ const Footer = () => {
 							<Image src={phone} alt='phone' />
 							<SpanContentUs>mail@example.com</SpanContentUs>
 						</DivContentUs>
-					</div>
+					</DivContentWrapper>
 				</DivContent>
 			</FooterWrapper>
 		</FooterContent>

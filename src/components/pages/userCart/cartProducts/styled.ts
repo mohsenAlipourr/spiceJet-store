@@ -11,8 +11,13 @@ export const Wrapper = styled.div(() => ({
 	padding: 9,
 	marginTop: 20,
 	width: 520,
+
 	'& img': {
 		cursor: 'pointer',
+	},
+
+	'@media (max-width: 600px)': {
+		width: '100%',
 	},
 }));
 
