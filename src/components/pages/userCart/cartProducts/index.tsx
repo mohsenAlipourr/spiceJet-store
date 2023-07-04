@@ -3,7 +3,7 @@ import close from 'public/icons/close.png';
 import Button from '../../../base/button';
 import { postCartChange } from '@src/api/cart';
 import { cloneList } from '@src/utils';
-
+import { updateGlobalSlice } from '@src/store/globalSlice';
 import {
 	CounterNumber,
 	OrderedProduct,
@@ -15,6 +15,7 @@ import {
 	Wrapper,
 	Total,
 } from './styled';
+import { useDispatch } from 'react-redux';
 
 type ProductSlideProps = {
 	cartList?: any;
@@ -22,6 +23,8 @@ type ProductSlideProps = {
 };
 
 const CartProducts = ({ cartList, setCartList }: ProductSlideProps) => {
+	const dispatch = useDispatch();
+
 	const increment = async (id: string) => {
 		const response = await postCartChange(id, 1);
 		if (response.status === 200) {
@@ -50,11 +53,13 @@ const CartProducts = ({ cartList, setCartList }: ProductSlideProps) => {
 		const response = await postCartChange(id, 0);
 
 		if (response.status === 200) {
+			const cartListDelete = JSON.parse(localStorage.getItem('cartList') || '');
 			const index = cartList.findIndex((item: any) => item.id === id);
 			const listCloned = cloneList(cartList);
 
 			listCloned.splice(index, 1);
 			setCartList(listCloned);
+			dispatch(updateGlobalSlice({ cartTotal: cartListDelete?.length }));
 		}
 	};
 
