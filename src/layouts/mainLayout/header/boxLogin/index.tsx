@@ -14,30 +14,29 @@ const BoxLogin = () => {
 	const counter = useSelector((state: any) => state.globalSlice.data.cartTotal);
 	const isLogin = email && password;
 
-	return (
-		<>
-			{isLogin ? (
-				<DivIcon>
-					<Link href={routes.profile}>
-						<Image src={account} alt='account' />
-					</Link>
+	if (!isLogin)
+		return (
+			<Link href={routes.login}>
+				<Button width={165} fontSize={15}>
+					Login | Register
+				</Button>
+			</Link>
+		);
 
-					<DivIconCart>
-						<Link href={routes.cart}>
-							<Image src={cart} alt='cart' />
-						</Link>
-					</DivIconCart>
+	return (
+		<DivIcon>
+			<Link href={routes.profile}>
+				<Image src={account} alt='account' />
+			</Link>
+
+			<DivIconCart>
+				<Link href={routes.cart}>
+					<Image src={cart} alt='cart' />
 
 					{counter ? <Counter>{counter}</Counter> : <></>}
-				</DivIcon>
-			) : (
-				<Link href={routes.login}>
-					<Button width={165} fontSize={15}>
-						Login | Register
-					</Button>
 				</Link>
-			)}
-		</>
+			</DivIconCart>
+		</DivIcon>
 	);
 };
 

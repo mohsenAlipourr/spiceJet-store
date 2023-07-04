@@ -4,22 +4,29 @@ export const Wrapper = styled.div(() => ({
 	display: 'flex',
 	justifyContent: 'center',
 	marginTop: 80,
-	flexWrap: 'wrap',
+
+	'@media (max-width: 992px)': {
+		alignItems: 'center',
+		flexDirection: 'column',
+	},
 }));
 
 export const CartProfile = styled.div(() => ({
-	'@media (max-width: 600px)': {
-		border: 'none',
-		height: 150,
-		marginRight: '0',
-		width: '100%',
-	},
 	width: 400,
 	height: 400,
 	borderRadius: 7,
 	border: '3px solid #e0e0e6',
 	marginRight: 50,
 	padding: 20,
+
+	'@media (max-width: 992px)': {
+		marginRight: '0',
+	},
+
+	'@media (max-width: 600px)': {
+		height: 'auto',
+		width: '100%',
+	},
 }));
 
 export const Account = styled.div(() => ({
@@ -32,6 +39,7 @@ export const Account = styled.div(() => ({
 
 export const AccountContent = styled.div(() => ({
 	display: 'flex',
+	overflow: 'hidden',
 }));
 
 export const UserInformation = styled.div(() => ({
@@ -69,15 +77,4 @@ export const Exit = styled.div(() => ({
 export const ExitText = styled.div(() => ({
 	marginLeft: 10,
 	fontSize: 18,
-}));
-
-export const CartContent = styled.div(() => ({
-	'@media (max-width: 600px)': {
-		border: 'none',
-	},
-	height: 600,
-	width: 700,
-	borderRadius: 7,
-	border: '3px solid #e0e0e6',
-	padding: 20,
 }));

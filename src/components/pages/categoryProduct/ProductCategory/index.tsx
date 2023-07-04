@@ -3,8 +3,8 @@ import Link from 'next/link';
 import loading from 'public/images/loading.gif';
 import interest from 'public/icons/interest.png';
 import score from 'public/icons/score.png';
-import { Product, ProductFavorites, ProductName, ProductPrice, Score } from './styled';
 import { routes } from '@src/constants/routes';
+import { Product, ProductFavorites, ProductName, ProductPrice, Score } from './styled';
 
 type ProductSlideProps = {
 	title?: string;

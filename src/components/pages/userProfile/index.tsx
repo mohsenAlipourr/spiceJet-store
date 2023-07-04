@@ -1,18 +1,16 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
+/* import edit from 'public/icons/edit.png'; */
 import profile from 'public/images/profile.png';
-/* import edit from 'public/icons/edit.png';
- */ import cart from 'public/icons/cart.png';
+import cart from 'public/icons/cart.png';
 import exit from 'public/icons/exit.png';
-import OrderedProducts from '@src/components/base/orderedProducts';
 import { routes } from '@src/constants/routes';
 import { updateGlobalSlice } from '../../../store/globalSlice';
-
+import OrderedProducts from './orderedProducts';
 import {
 	Account,
 	AccountContent,
-	CartContent,
 	CartProfile,
 	Exit,
 	ExitText,
@@ -67,9 +65,7 @@ const UserProfile = () => {
 				</div>
 			</CartProfile>
 
-			<CartContent>
-				<OrderedProducts></OrderedProducts>
-			</CartContent>
+			<OrderedProducts />
 		</Wrapper>
 	);
 };

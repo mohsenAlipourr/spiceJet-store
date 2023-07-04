@@ -22,6 +22,7 @@ import {
 	Share,
 	ProductName,
 	ProductPrice,
+	ImagesProduct,
 } from './styled';
 
 const ProductContent = ({ data }: any) => {
@@ -59,11 +60,11 @@ const ProductContent = ({ data }: any) => {
 
 					<Image src={data.images[0]} alt='image' width={300} height={300} />
 
-					<div>
+					<ImagesProduct>
 						{data.images.map((item: any, index: any) => (
 							<Image src={item} alt='image' width={100} height={100} key={index} />
 						))}
-					</div>
+					</ImagesProduct>
 				</AlbumImage>
 
 				<Product>

@@ -1,9 +1,18 @@
 import { getCategoryData } from '@src/api/category';
 import CategoryProduct from '@src/components/pages/categoryProduct';
 import { GetServerSideProps } from 'next';
+import Head from 'next/head';
 
 const Category = (props: any) => {
-	return <CategoryProduct data={props.data.data} />;
+	return (
+		<>
+			<Head>
+				<title>spiceJet - Category</title>
+			</Head>
+
+			<CategoryProduct data={props.data.data} />
+		</>
+	);
 };
 
 export const getServerSideProps: GetServerSideProps<any> = async (context: any) => {

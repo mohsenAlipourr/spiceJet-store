@@ -9,6 +9,7 @@ export const HeaderContent = styled.header(() => ({
 	background: ' white',
 	boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.1)',
 	position: 'fixed',
+	zIndex: 99,
 }));
 
 export const HeaderWrapper = styled.div(() => ({
@@ -16,19 +17,28 @@ export const HeaderWrapper = styled.div(() => ({
 	height: '100%',
 	display: 'flex',
 	alignItems: 'center',
+	justifyContent: 'space-between',
 }));
 
 export const ListCategories = styled.div(() => ({
-	'@media (max-width: 600px)': {
-		display: 'none',
-	},
-	width: '100%',
 	display: 'flex',
 	justifyContent: 'center',
 	fontSize: 20,
+	padding: '0 10px',
+	overflow: 'hidden',
+
 	'& a': {
+		whiteSpace: 'pre',
 		textDecoration: 'none',
 		color: black[100],
+	},
+
+	'@media (max-width: 1092px)': {
+		justifyContent: 'flex-start',
+	},
+
+	'@media (max-width: 600px)': {
+		display: 'none',
 	},
 }));
 
