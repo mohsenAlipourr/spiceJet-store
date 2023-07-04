@@ -19,7 +19,7 @@ export const Register = styled.div(() => ({
 		padding: '0',
 	},
 	border: '3px solid #e0e0e6',
-	height: 400,
+	height: 440,
 	borderRadius: 7,
 	padding: 30,
 }));

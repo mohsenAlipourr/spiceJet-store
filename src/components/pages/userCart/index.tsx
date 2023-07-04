@@ -18,8 +18,12 @@ import {
 	/* Subtotal,
 	SubtotalPrice, */
 } from './styled';
+import { useDispatch } from 'react-redux';
+import { updateGlobalSlice } from '@src/store/globalSlice';
 
 const UserCart = ({ cartList, setCartList }: any) => {
+	const dispatch = useDispatch();
+
 	const [inputValues, setInputValues] = useState({
 		country: '',
 		state: '',
@@ -43,8 +47,7 @@ const UserCart = ({ cartList, setCartList }: any) => {
 
 		if (response.status === 201) {
 			router.push(routes.profile);
-		} else {
-			alert('test');
+			dispatch(updateGlobalSlice({ cartTotal: null }));
 		}
 	};
 

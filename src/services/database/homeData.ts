@@ -33,12 +33,12 @@ export const homeData = {
 	sliderProducts: {
 		bestOffer: {
 			title: 'Best Offer Products',
-			list: [productsData[18], productsData[13], productsData[20]],
+			list: [productsData[18], productsData[13], productsData[20], productsData[6]],
 		},
 
 		bestSelling: {
 			title: 'Best Selling Products',
-			list: [productsData[17], productsData[30], productsData[27]],
+			list: [productsData[17], productsData[15], productsData[27], productsData[10]],
 		},
 	},
 };

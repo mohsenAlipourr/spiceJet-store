@@ -29,7 +29,8 @@ const Footer = () => {
 					<DivContentWrapper>
 						<FooterTitle>About us</FooterTitle>
 						<PContent>
-							Pellentesque posuere orci lobortis scelerisque blandit. Donec id telus lacinia an, tincidunt risus ac.
+							Selling spices is one of the most profitable home businesses. There are steps you need to go through to
+							start your own spice business.
 						</PContent>
 					</DivContentWrapper>
 
@@ -38,12 +39,12 @@ const Footer = () => {
 
 						<DivContentUs>
 							<Image src={mail} alt='mail' />
-							<SpanContentUs>09102416098</SpanContentUs>
+							<SpanContentUs>mail@example.com</SpanContentUs>
 						</DivContentUs>
 
 						<DivContentUs>
 							<Image src={phone} alt='phone' />
-							<SpanContentUs>mail@example.com</SpanContentUs>
+							<SpanContentUs>09102416098</SpanContentUs>
 						</DivContentUs>
 					</DivContentWrapper>
 				</DivContent>

@@ -1,8 +1,7 @@
-import { HomeDataApiResponse } from '@src/interfaces/home';
 import { homeData } from '@src/services/database/homeData';
 
 type Response = {
-	data: HomeDataApiResponse;
+	data: any;
 	status: 200 | 404;
 };
 
