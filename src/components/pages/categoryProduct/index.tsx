@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import filter from 'public/icons/filter.png';
-/* import Input from '@src/components/base/input'; */
+import Input from '@src/components/base/input';
 import ProductCategory from './ProductCategory';
-import { FilterProducts, ProductContent, Products, /*  Search, Sidebar, */ Wrapper } from './styled';
+import { FilterProducts, ProductContent, Products, Search, Sidebar, Wrapper } from './styled';
 
 const CategoryProduct = ({ data }: any) => {
 	return (
@@ -23,7 +23,7 @@ const CategoryProduct = ({ data }: any) => {
 				</Products>
 			</ProductContent>
 
-			{/* <Sidebar>
+			<Sidebar>
 				<Search>
 					<span>Search</span>
 					<Input />
@@ -36,7 +36,7 @@ const CategoryProduct = ({ data }: any) => {
 				<div>
 					<span>Category</span>
 				</div>
-			</Sidebar> */}
+			</Sidebar>
 		</Wrapper>
 	);
 };
