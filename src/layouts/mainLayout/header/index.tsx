@@ -28,7 +28,7 @@ const Header = () => {
 		const password = localStorage.getItem('password');
 
 		if (email && password) {
-			const cartList = JSON.parse(localStorage.getItem('cartList') || '');
+			const cartList = localStorage.getItem('cartList') ? JSON.parse(localStorage.getItem('cartList') || '') : '';
 
 			dispatch(updateGlobalSlice({ cartTotal: cartList?.length, email: email, password: password }));
 		}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import loading from 'public/images/loading.gif';
 import { routes } from '@src/constants/routes';
 import { Products, Product, Title, Content, ProductPrice, ProductTitle } from './styled';
+import Button from '../button';
 
 type ProductSlideProps = {
 	title?: string;
@@ -25,6 +26,7 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 
 								<ProductTitle>{item.title}</ProductTitle>
 								<ProductPrice>{`$${item.price}`}</ProductPrice>
+								<Button>Add To Cart</Button>
 							</Link>
 						</Product>
 					))

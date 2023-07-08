@@ -47,14 +47,3 @@ export const ProductPrice = styled.span(() => ({
 	color: red[400],
 	fontSize: 18,
 }));
-
-export const Subtotal = styled.span(() => ({
-	fontSize: 18,
-	marginRight: 8,
-	color: blue[500],
-}));
-
-export const SubtotalPrice = styled.span(() => ({
-	fontSize: 18,
-	color: red[400],
-}));

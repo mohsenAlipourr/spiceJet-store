@@ -7,8 +7,8 @@ import { postCartChange } from '@src/api/cart';
 import score from 'public/icons/score.png';
 import share from 'public/icons/share.png';
 import interest from 'public/icons/interest.png';
-/* import ProductTabs from './productTabs';
- */ import { updateGlobalSlice } from '../../../store/globalSlice';
+import ProductTabs from './productTabs';
+import { updateGlobalSlice } from '../../../store/globalSlice';
 
 import {
 	AlbumImage,
@@ -87,7 +87,7 @@ const ProductContent = ({ data }: any) => {
 				</Product>
 			</Wrapper>
 
-			{/* <ProductTabs data={data.description} /> */}
+			<ProductTabs data={data.description} />
 		</>
 	);
 };

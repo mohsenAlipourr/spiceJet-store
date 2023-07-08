@@ -4,6 +4,7 @@ import loading from 'public/images/loading.gif';
 import interest from 'public/icons/interest.png';
 import score from 'public/icons/score.png';
 import { routes } from '@src/constants/routes';
+import Button from '@src/components/base/button';
 import { Product, ProductFavorites, ProductName, ProductPrice, Score } from './styled';
 
 type ProductSlideProps = {
@@ -31,7 +32,7 @@ const ProductCategory = ({ list }: ProductSlideProps) => {
 							</ProductFavorites>
 							<ProductPrice>{`$ ${item.price}`}</ProductPrice>
 						</Link>
-						{/* <Button>Add To Cart</Button> */}
+						<Button>Add To Cart</Button>
 					</Product>
 				))
 			) : (
