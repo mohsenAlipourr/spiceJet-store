@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
+import theme from '@styles/theme';
+
+const { black } = theme.colors;
 
 export const Wrapper = styled.div(() => ({
 	display: 'flex',
 	justifyContent: 'space-around',
 	marginTop: 60,
+	alignItems: 'baseline',
 }));
 
 export const ProductContent = styled.div(() => ({
@@ -25,14 +29,32 @@ export const Products = styled.div(() => ({
 	flexWrap: 'wrap',
 }));
 
+export const Sidebar = styled.div(() => ({
+	display: 'flex',
+	flexDirection: 'column',
+	justifyContent: 'space-between',
+	height: 565,
+}));
+
 export const Search = styled.div(() => ({
 	display: 'flex',
 	flexDirection: 'column',
 }));
 
-export const Sidebar = styled.div(() => ({
+export const PriceRange = styled.div(() => ({
+	width: '200px',
+	marginTop: 20,
+}));
+
+export const CategoryFilter = styled.div(() => ({
 	display: 'flex',
 	flexDirection: 'column',
-	justifyContent: 'space-between',
-	height: 500,
+
+	'& a': {
+		textDecoration: 'none',
+		marginTop: 20,
+		color: black[100],
+		borderBottom: '3px solid #e0e0e6',
+		paddingBottom: 7,
+	},
 }));
