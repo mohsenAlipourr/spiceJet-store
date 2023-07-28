@@ -1,15 +1,15 @@
 import { ButtonContainer } from './styled';
 
 type ButtonProps = {
-	children: any;
+	children: string;
 	radius?: number;
 	color?: string | number;
 	background?: string | number;
 	width?: string | number;
 	height?: string | number;
-	disable?: any;
+	disable?: boolean;
 	borderColor?: string | number;
-	onClick?: any;
+	onClick?: Function;
 	props?: any;
 	fontSize?: number;
 };

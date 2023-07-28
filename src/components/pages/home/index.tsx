@@ -1,10 +1,14 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import ProductSlide from '../../base/productsSlide';
 import { BannerFullWidth, DivBanners, DivBannersLeft, DivBannersRight, HomeWrapper } from './styled';
 import { HomeDataApiResponse } from '@src/interfaces/home';
 
 type HomeContentProps = {
 	data: HomeDataApiResponse;
+};
+type smallType = {
+	alt: string;
+	link: StaticImageData;
 };
 
 const HomeContent = ({ data }: HomeContentProps) => {
@@ -24,7 +28,7 @@ const HomeContent = ({ data }: HomeContentProps) => {
 
 			<DivBanners>
 				<DivBannersLeft>
-					{data.bannerBottom.small.map((item: any, index: any) => (
+					{data.bannerBottom.small.map((item: smallType, index: number) => (
 						<Image key={index} src={item.link} alt={item.alt} />
 					))}
 				</DivBannersLeft>

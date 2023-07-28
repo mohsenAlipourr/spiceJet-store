@@ -9,11 +9,12 @@ import { routes } from '@src/constants/routes';
 import Button from '@src/components/base/button';
 import { updateGlobalSlice } from '@src/store/globalSlice';
 import { postCartChange } from '@src/api/cart';
+import { ListProducts } from '@src/interfaces/listProducts';
 import { Product, ProductFavorites, ProductName, ProductPrice, Score } from './styled';
 
 type ProductSlideProps = {
 	title?: string;
-	list?: any;
+	list?: [];
 };
 
 const ProductCategory = ({ list }: ProductSlideProps) => {
@@ -40,7 +41,7 @@ const ProductCategory = ({ list }: ProductSlideProps) => {
 	return (
 		<>
 			{list ? (
-				list.map((item: any, index: any) => (
+				list.map((item: ListProducts, index: number) => (
 					<Product key={index}>
 						<Link href={routes.product(item.id)}>
 							<Image src={item.images[0]} alt='image' width={225} height={225} />

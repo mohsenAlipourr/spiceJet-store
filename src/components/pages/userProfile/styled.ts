@@ -52,15 +52,32 @@ export const User = styled.span(() => ({
 	fontSize: 18,
 }));
 
+export const Fever = styled.div(() => ({
+	position: 'relative',
+	cursor: 'pointer',
+	'&:hover': {
+		backgroundColor: '#f2f2f2',
+	},
+}));
+
+export const ActiveFever = styled.div(() => ({
+	position: 'absolute',
+	borderLeft: '4px solid #fa4564',
+	height: 55,
+	borderRadius: '5px 0 0 5px',
+	top: '3px',
+	left: '-20px',
+}));
+
 export const Orders = styled.div(() => ({
 	display: 'flex',
 	alignItems: 'center',
-	marginTop: 20,
+	paddingTop: 20,
 	borderBottom: '3px solid #e0e0e6',
 	paddingBottom: 20,
 }));
 
-export const OrderText = styled.div(() => ({
+export const OrderText = styled.span(() => ({
 	marginLeft: 10,
 	fontSize: 18,
 }));
@@ -68,7 +85,7 @@ export const OrderText = styled.div(() => ({
 export const Exit = styled.div(() => ({
 	display: 'flex',
 	alignItems: 'center',
-	marginTop: 20,
+	paddingTop: 20,
 	borderBottom: '3px solid #e0e0e6',
 	paddingBottom: 20,
 	cursor: 'pointer',

@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Slider from '@mui/material/Slider';
 import filter from 'public/icons/filter.png';
 import Input from '@src/components/base/input';
 import ProductCategory from './ProductCategory';
@@ -17,13 +15,11 @@ import {
 	Wrapper,
 } from './styled';
 
-const CategoryProduct = ({ data }: any) => {
-	const [range, setRange] = useState([20, 70]);
+type CategoryProductType = {
+	data: [];
+};
 
-	function handleChanges(event: any, newValue: any) {
-		setRange(newValue);
-	}
-
+const CategoryProduct = ({ data }: CategoryProductType) => {
 	const listCategory = [
 		{ title: 'masalas', link: 'masalas' },
 		{ title: 'chat masalas', link: 'chat-masalas' },
@@ -59,12 +55,7 @@ const CategoryProduct = ({ data }: any) => {
 				<div>
 					<span>Price range</span>
 
-					<PriceRange>
-						<Slider value={range} onChange={handleChanges} valueLabelDisplay='auto' />
-						<span>
-							{`$${range[0]}`} - {`$${range[1]}`}
-						</span>
-					</PriceRange>
+					<PriceRange />
 				</div>
 
 				<div>

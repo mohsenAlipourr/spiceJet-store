@@ -1,4 +1,4 @@
-export const cloneList = (list: any) => {
+export const cloneList = (list: []) => {
 	if (!list) return;
 	return JSON.parse(JSON.stringify(list));
 };

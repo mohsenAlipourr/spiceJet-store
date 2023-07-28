@@ -26,7 +26,7 @@ const Home = ({ data }: HomeProps) => {
 	);
 };
 
-export const getServerSideProps: GetServerSideProps<any> = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	const response = await getHomeData();
 
 	return { props: { data: response.data } };

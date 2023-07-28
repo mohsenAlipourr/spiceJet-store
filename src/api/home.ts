@@ -1,7 +1,14 @@
 import { homeData } from '@src/services/database/homeData';
 
+type DataType = {
+	slider: {};
+	bannerMiddle: {};
+	bannerBottom: {};
+	sliderProducts: {};
+};
+
 type Response = {
-	data: any;
+	data: DataType;
 	status: 200 | 404;
 };
 

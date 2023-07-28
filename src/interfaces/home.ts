@@ -24,7 +24,7 @@ export interface HomeDataApiResponse {
 			title: string;
 			list: {
 				id: string;
-				image: StaticImageData;
+				images: StaticImageData;
 				title: string;
 				price: number;
 			}[];
@@ -34,7 +34,7 @@ export interface HomeDataApiResponse {
 			title: string;
 			list: {
 				id: string;
-				image: StaticImageData;
+				images: StaticImageData;
 				title: string;
 				price: number;
 			}[];

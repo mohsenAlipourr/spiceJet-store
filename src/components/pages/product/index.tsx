@@ -9,7 +9,6 @@ import share from 'public/icons/share.png';
 import interest from 'public/icons/interest.png';
 import ProductTabs from './productTabs';
 import { updateGlobalSlice } from '../../../store/globalSlice';
-
 import {
 	AlbumImage,
 	Description,
@@ -45,6 +44,7 @@ const ProductContent = ({ data }: any) => {
 			router.push(routes.cart);
 		}
 	};
+	console.log(data);
 
 	return (
 		<>
@@ -61,7 +61,7 @@ const ProductContent = ({ data }: any) => {
 					<Image src={data.images[0]} alt='image' width={300} height={300} />
 
 					<ImagesProduct>
-						{data.images.map((item: any, index: any) => (
+						{data.images.map((item: string, index: number) => (
 							<Image src={item} alt='image' width={100} height={100} key={index} />
 						))}
 					</ImagesProduct>

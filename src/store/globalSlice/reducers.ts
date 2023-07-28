@@ -1,5 +1,9 @@
+type stateType = {
+	data: {};
+};
+
 const reducers = {
-	updateGlobalSlice: (state: any, action: { payload: any }) => {
+	updateGlobalSlice: (state: stateType, action: { payload: any }) => {
 		state.data = { ...state.data, ...action.payload };
 	},
 };

@@ -11,7 +11,7 @@ export const title = Varela_Round({
 });
 
 type MainLayoutProps = {
-	children: any;
+	children: React.ReactNode;
 };
 
 const MainLayout = ({ children }: MainLayoutProps) => {
