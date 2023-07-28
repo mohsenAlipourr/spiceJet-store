@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-/* import dynamic from 'next/dynamic';
- */ import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import account from 'public/icons/account.png';
 import cart from 'public/icons/cart.png';
 import { Counter, DivIcon, DivIconCart } from './styled';

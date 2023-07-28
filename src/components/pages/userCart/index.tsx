@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 import CartProducts from '@src/components/pages/userCart/cartProducts';
+import { updateGlobalSlice } from '@src/store/globalSlice';
 import Input from '@src/components/base/input';
 import Button from '@src/components/base/button';
 import { postNewOrder } from '@src/api/order';
 import { routes } from '@src/constants/routes';
-
 import {
 	BuyButton,
 	CartTitle,
@@ -15,13 +16,14 @@ import {
 	FormInputTitle,
 	ProductsShoppingCart,
 	Wrapper,
-	/* Subtotal,
-	SubtotalPrice, */
 } from './styled';
-import { useDispatch } from 'react-redux';
-import { updateGlobalSlice } from '@src/store/globalSlice';
 
-const UserCart = ({ cartList, setCartList }: any) => {
+type UserCartType = {
+	cartList?: any;
+	setCartList?: any;
+};
+
+const UserCart = ({ cartList, setCartList }: UserCartType) => {
 	const dispatch = useDispatch();
 
 	const [inputValues, setInputValues] = useState({
@@ -31,7 +33,7 @@ const UserCart = ({ cartList, setCartList }: any) => {
 	});
 	const router = useRouter();
 
-	const handleChange = (e: any) => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
 
 		setInputValues((prev) => {
@@ -50,11 +52,6 @@ const UserCart = ({ cartList, setCartList }: any) => {
 			dispatch(updateGlobalSlice({ cartTotal: null }));
 		}
 	};
-
-	/* const sum = cartList.reduce((acc: any, curr: any) => {
-		acc += curr.price;
-		return acc;
-	}, 0); */
 
 	return (
 		<>
@@ -96,11 +93,6 @@ const UserCart = ({ cartList, setCartList }: any) => {
 								<Button width={145} onClick={handleSubmitForm}>
 									Continue shopping
 								</Button>
-								{/* <div>
-									<Subtotal> subtotal:</Subtotal>
-
-									<SubtotalPrice>{`$${sum}`}</SubtotalPrice>
-								</div> */}
 							</BuyButton>
 						</Form>
 					</div>

@@ -1,10 +1,28 @@
-import { GetServerSideProps } from 'next';
+import type { GetServerSideProps } from 'next';
 import { getProductData } from '@src/api/product';
 import ProductContent from '@src/components/pages/product';
 import Head from 'next/head';
+import { StaticImageData } from 'next/image';
 
-const Product = (props: any) => {
+type ProductType = {
+	data: {
+		data: {
+			category: string;
+			description: [];
+			id: string;
+			images: StaticImageData[];
+			price: number;
+			score: number;
+			summery: string;
+			title: string;
+		};
+		status: number;
+	};
+};
+
+const Product = (props: ProductType) => {
 	const product = props.data.status === 200;
+	console.log('props', props);
 
 	return (
 		<>
@@ -17,7 +35,7 @@ const Product = (props: any) => {
 	);
 };
 
-export const getServerSideProps: GetServerSideProps<any> = async (context: any) => {
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
 	const id = context.query.id;
 
 	const response = await getProductData(id[0]);

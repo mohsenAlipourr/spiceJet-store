@@ -1,6 +1,11 @@
 import React from 'react';
 import { DescriptionTabs, Tab, Tabs, Wrapper } from './styled';
 
+type ProductTabsType = {
+	content: string;
+	title: string;
+};
+
 const ProductTabs = ({ data }: any) => {
 	return (
 		<Wrapper>
@@ -8,7 +13,7 @@ const ProductTabs = ({ data }: any) => {
 				<Tab>Product Description</Tab>
 			</Tabs>
 			<DescriptionTabs>
-				{data.map((item: any, index: number) => (
+				{data.map((item: ProductTabsType, index: number) => (
 					<React.Fragment key={index}>
 						<h3>{item.title}</h3>
 						<p>{item.content}</p>

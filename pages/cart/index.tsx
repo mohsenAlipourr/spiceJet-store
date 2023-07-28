@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { getCartList } from '@src/api/cart';
 import UserCart from '@src/components/pages/userCart';
-import { useRouter } from 'next/router';
 import { routes } from '@src/constants/routes';
-import Head from 'next/head';
 
 const Cart = () => {
 	const [cartList, setCartList] = useState([]);

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import loading from 'public/images/loading.gif';
@@ -11,7 +11,19 @@ import { Products, Product, Title, Content, ProductPrice, ProductTitle } from '.
 
 type ProductSlideProps = {
 	title?: string;
-	list?: any;
+	list: {
+		id: string;
+		images: StaticImageData;
+		title: string;
+		price: number;
+	}[];
+};
+
+type ListType = {
+	id: string;
+	price: number;
+	images: any;
+	title: string;
 };
 
 const ProductSlide = ({ title, list }: ProductSlideProps) => {
@@ -43,7 +55,7 @@ const ProductSlide = ({ title, list }: ProductSlideProps) => {
 
 			<Products>
 				{list ? (
-					list.map((item: any, index: any) => (
+					list.map((item: ListType, index: number) => (
 						<Product key={index}>
 							<Link href={routes.product(item.id)}>
 								<Image src={item.images[0]} alt='image' width={225} height={225} />

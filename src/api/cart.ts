@@ -5,13 +5,17 @@ type CartChangeResponse = {
 	status: 200 | 422;
 };
 
+type CartListType = {
+	id: string;
+};
+
 export const postCartChange = (id: string, total: number) => {
 	return new Promise<CartChangeResponse>((resolve) => {
 		try {
 			if (id && typeof total === 'number') {
 				const cartListLocalStorage = localStorage.getItem('cartList') || '[]';
 				const cartList = JSON.parse(cartListLocalStorage) || [];
-				const index = cartList.findIndex((item: any) => item.id === id);
+				const index = cartList.findIndex((item: CartListType) => item.id === id);
 
 				if (index !== -1) {
 					if (total === 0) {
@@ -61,7 +65,7 @@ export const getCartList = () => {
 			const cartListLocalStorage = localStorage.getItem('cartList') || '[]';
 			const cartList = JSON.parse(cartListLocalStorage) || [];
 
-			cartList.forEach(async (item: any, index: number) => {
+			cartList.forEach(async (item: CartListType, index: number) => {
 				const response = await getProductData(item.id);
 				cartList[index] = { ...response.data, ...cartList[index] };
 			});

@@ -1,3 +1,4 @@
+import { ListProducts } from '@src/interfaces/listProducts';
 import { getProductData } from './product';
 
 type CartChangeResponse = {
@@ -38,6 +39,12 @@ type CartListResponse = {
 	data: [];
 	status: 200 | 403;
 };
+type CartListType = {
+	country: string;
+	postalCode: string;
+	products: [];
+	state: string;
+};
 
 export const getMyOrders = () => {
 	return new Promise<CartListResponse>((resolve) => {
@@ -45,8 +52,8 @@ export const getMyOrders = () => {
 			const cartListLocalStorage = localStorage.getItem('myOrders') || '[]';
 			const cartList = JSON.parse(cartListLocalStorage) || [];
 
-			cartList.forEach(async (item: any, index: number) => {
-				item.products.forEach(async (product: any, indexProduct: number) => {
+			cartList.forEach(async (item: CartListType, index: number) => {
+				item.products.forEach(async (product: ListProducts, indexProduct: number) => {
 					const response = await getProductData(product.id);
 
 					cartList[index].products[indexProduct] = { ...response.data, ...cartList[index].products[indexProduct] };

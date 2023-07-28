@@ -1,9 +1,16 @@
-import { getCategoryData } from '@src/api/category';
-import CategoryProduct from '@src/components/pages/categoryProduct';
-import { GetServerSideProps } from 'next';
+import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import CategoryProduct from '@src/components/pages/categoryProduct';
+import { getCategoryData } from '@src/api/category';
 
-const Category = (props: any) => {
+type CategoryType = {
+	data: {
+		data: [];
+		status: number;
+	};
+};
+
+const Category = (props: CategoryType) => {
 	return (
 		<>
 			<Head>
@@ -15,7 +22,7 @@ const Category = (props: any) => {
 	);
 };
 
-export const getServerSideProps: GetServerSideProps<any> = async (context: any) => {
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
 	const id = context.query.id;
 
 	const response = await getCategoryData(id[0]);

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
-const { black, blue, red } = theme.colors;
+const { black, blue } = theme.colors;
 
 export const Wrapper = styled.div(() => ({
 	flexWrap: 'wrap',
@@ -57,15 +57,4 @@ export const FormInputTitle = styled.span(() => ({
 	fontSize: 18,
 	marginBottom: 10,
 	color: blue[500],
-}));
-
-export const Subtotal = styled.span(() => ({
-	fontSize: 18,
-	marginRight: 8,
-	color: blue[500],
-}));
-
-export const SubtotalPrice = styled.span(() => ({
-	fontSize: 18,
-	color: red[400],
 }));

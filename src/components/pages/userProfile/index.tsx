@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-/* import edit from 'public/icons/edit.png'; */
+import edit from 'public/icons/edit.png';
 import profile from 'public/images/profile.png';
 import cart from 'public/icons/cart.png';
 import exit from 'public/icons/exit.png';
@@ -11,9 +11,11 @@ import OrderedProducts from './orderedProducts';
 import {
 	Account,
 	AccountContent,
+	ActiveFever,
 	CartProfile,
 	Exit,
 	ExitText,
+	Fever,
 	OrderText,
 	Orders,
 	User,
@@ -45,24 +47,24 @@ const UserProfile = () => {
 						</UserInformation>
 					</AccountContent>
 
-					{/* <Image src={edit} alt='edit' /> */}
+					<Image src={edit} alt='edit' />
 				</Account>
 
-				<div>
+				<Fever>
+					<ActiveFever></ActiveFever>
 					<Orders>
 						<Image src={cart} alt='cart' width={20} height={20} />
 
 						<OrderText>Orders</OrderText>
 					</Orders>
-				</div>
-
-				<div>
+				</Fever>
+				<Fever>
 					<Exit onClick={handleLogOut}>
 						<Image src={exit} alt='exit' width={20} height={20} />
 
 						<ExitText>Exit</ExitText>
 					</Exit>
-				</div>
+				</Fever>
 			</CartProfile>
 
 			<OrderedProducts />

@@ -1,10 +1,25 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { Wrapper, OrderedProductDetails, OrderedProductName, Price, PriceProduct, Total } from './styled';
 
-const OrderedProduct = ({ products }: any) => {
+type OrderType = {
+	products: [];
+};
+type OrderedProductType = {
+	category: string;
+	description: [];
+	id: string;
+	images: StaticImageData[];
+	price: number;
+	score: number;
+	summery: string;
+	title: string;
+	total: number;
+};
+
+const OrderedProduct = ({ products }: OrderType) => {
 	return (
 		<>
-			{products.map((item: any, index: any) => (
+			{products.map((item: OrderedProductType, index: number) => (
 				<Wrapper key={index}>
 					<Image src={item.images[0]} alt='image' width={150} height={150} />
 

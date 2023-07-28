@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ChangeEvent, FormEvent } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
@@ -19,7 +19,7 @@ const LoginPage = () => {
 	});
 	const router = useRouter();
 
-	const handleChange = (e: any) => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
 
 		setInputValues((prev) => {
@@ -39,7 +39,7 @@ const LoginPage = () => {
 		}
 	};
 
-	const handleSubmit = (event: any) => {
+	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 	};
 
@@ -79,6 +79,7 @@ const LoginPage = () => {
 							height={'50px'}
 							name='password'
 							placeholder='password'
+							type={'password'}
 							value={inputValues.password}
 							onChange={handleChange}
 						/>
